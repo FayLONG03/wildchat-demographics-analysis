@@ -29,6 +29,35 @@ This is the final course project for NLP for CSS. This project contains four sec
 
 ## Section 2: Topic Modeling
 
+### Model: BERTopic
+
+We apply BERTopic (Grootendorst, 2022) to the preprocessed user turns. 
+Documents are encoded using `all-MiniLM-L6-v2`, reduced with UMAP, 
+clustered with HDBSCAN, and keywords extracted via class-based TF-IDF.
+
+### Parameter sweep
+
+We swept over 5 configurations varying `min_topic_size` (50, 100, 200) 
+and UMAP `n_neighbors` (10, 15). Each run was evaluated on topic coherence 
+(c_v), topic diversity, topic count, and outlier rate.
+
+### Best configuration
+
+| Parameter | Value |
+|---|---|
+| min_topic_size | 100 |
+| n_neighbors | 15 |
+| min_cluster_size | 100 |
+| Topics found | 76 |
+| Coherence (c_v) | 0.5806 |
+| Diversity | 0.8408 |
+| Outlier rate | 44.9% |
+
+### Outputs
+- `results/bertopic_experiment_log.csv` — scores for all 5 runs
+- `results/representative_prompts.csv` — top prompts per topic for labeling
+- `results/state_topic_proportions.parquet` — state-level topic proportions for correlation analysis
+
 ---
 
 ## Section 3: Word Statistics

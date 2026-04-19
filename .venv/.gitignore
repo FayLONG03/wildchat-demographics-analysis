@@ -1,0 +1,12 @@
+# Virtual environment
+.venv/
+
+# Large data/model files
+*.npy
+*.parquet
+
+# BERTopic saved models
+src/topic_modeling/results/bertopic_run_*/
+
+# Mac/Windows junk
+.DS_Store
