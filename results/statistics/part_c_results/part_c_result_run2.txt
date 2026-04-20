@@ -1,0 +1,28 @@
+Part C Result Snapshot (State-only)
+
+Top 12 most state-variable topics:
+   topic                                                                               top_words  std_proportion     max_state  max_proportion   min_state  min_proportion
+ topic_7                                 fish, pond, fart, story, comedic, vividly, farts, water        0.120958 Massachusetts        0.738690    Arkansas             0.0
+ topic_0                           script, write script, vs, state, round, conference, write, pm        0.114351  Pennsylvania        0.704998     Alabama             0.0
+ topic_9        email, bank, security, funds, presidio, anonymized, payment, presidio anonymized        0.083493       Florida        0.510417     Alabama             0.0
+ topic_1                               natsuki, monika, sayori, yuri, mc, just, club, literature        0.081984      Michigan        0.500731     Alabama             0.0
+ topic_2                    translate, english, chinese, japanese, mean, spanish, does, mandarin        0.078052   Connecticut        0.483913     Alabama             0.0
+ topic_6                   probability, numbers, solve, angle, answer, triangle, equation, minus        0.068916          Iowa        0.352273     Alabama             0.0
+topic_11                                   tommy, girlfriend, ed, eddy, ranger, edd, billy, girl        0.066963       Georgia        0.406955 Connecticut             0.0
+ topic_3                         political, empire, government, states, war, roman, did, peoples        0.064725      Virginia        0.277429     Alabama             0.0
+ topic_4 detailed, ar, description, prompt, detailed description, coffee, ai, description scenes        0.055384        Oregon        0.210526     Indiana             0.0
+topic_20                      models, ai, neural, model, learning, artificial, language, machine        0.053998     Wisconsin        0.333945     Alabama             0.0
+topic_10                      story, write story, man, write, bully, extremely, dialogue, female        0.053734     Louisiana        0.232558     Alabama             0.0
+topic_18                manipulation, physiology, spongebob, power, god, powers, combat, mastery        0.050642       Georgia        0.308725     Alabama             0.0
+
+Significance rows: 76 | min p: 0.0001999600079984 | max p: 0.0001999600079984
+
+Arizona top tokens: hair, hairpin, comb, clip, piercing, headband, makeup, brush
+
+Pennsylvania top tokens: script, stadium, conference, state, round, bowl, prometheus, espn
+
+Massachusetts top tokens: fish, ubuntu, pond, fart, amd, comedic, vividly, buff
+
+Florida top tokens: email, bank, cameron, funds, mccaffrey, fund, payment, dear
+
+Michigan top tokens: natsuki, sayori, monika, yuri, player, clubroom, baby, club
