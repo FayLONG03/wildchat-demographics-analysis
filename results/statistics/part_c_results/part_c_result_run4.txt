@@ -1,0 +1,29 @@
+Part C Result Snapshot Run 4 (Experiment 2 Deep-Dive)
+
+Effect-structure diagnostics
+- correlation between income-rho and education-rho vectors: 0.941
+- sign consistency across topics: 0.961
+- top-5 overlap (income vs education): 4/6 (Jaccard=0.667)
+- top-10 overlap (income vs education): 7/13 (Jaccard=0.538)
+- top-20 overlap (income vs education): 16/24 (Jaccard=0.667)
+
+Top 10 topics with largest rho gap between income and education
+   topic                                                                                   top_words  rho_income  rho_education  abs_gap
+ topic_4     detailed, ar, description, prompt, detailed description, coffee, ai, description scenes    0.383387       0.192491 0.190896
+topic_72             prompt, ar, coffee, ai, composition focused, reminiscent, capturing, ar imagine    0.419648       0.233051 0.186596
+topic_25 detailed, description, detailed description, ar, prompt, description scenes, scenes, coffee    0.444485       0.274406 0.170079
+topic_51    detailed, prompt, description, detailed description, ar, coffee, ai, composition focused    0.571180       0.431819 0.139362
+topic_22                                       const, div, html, js, react, button, function, import    0.022910       0.148420 0.125510
+topic_29                                 fight, women, melissa, rivals, match, rivalry, story, woman    0.060189       0.182680 0.122491
+ topic_7                                     fish, pond, fart, story, comedic, vividly, farts, water    0.127989       0.249650 0.121661
+topic_11                                       tommy, girlfriend, ed, eddy, ranger, edd, billy, girl   -0.176645      -0.059988 0.116657
+topic_58                                       tesla, electric, battery, car, li, vehicles, ev, auto    0.203719       0.099986 0.103733
+topic_48                                       motion, velocity, inches, cm, mass, speed, spring, kg    0.295319       0.192402 0.102917
+
+Significant links with nonzero-state support + bootstrap CI
+covariate    topic                                                                                   top_words  spearman_rho  fdr_q_value  nonzero_states  max_topic_prop  rho_ci95_low  rho_ci95_high
+education topic_63                                      scp, dr, researcher, log, 079, writes, test, interview      0.532860     0.046365              10        0.037818      0.262061       0.724278
+education topic_64                               galaxy, image, markdown, images, generate, draw, picture, url     -0.517755     0.046365              31        0.075000     -0.768068      -0.179097
+   income topic_51    detailed, prompt, description, detailed description, ar, coffee, ai, composition focused      0.571180     0.020862              15        0.032374      0.306659       0.773986
+   income topic_60 detailed, description, detailed description, ar, prompt, description scenes, scenes, coffee      0.517187     0.032328              14        0.032787      0.228061       0.741418
+   income topic_63                                      scp, dr, researcher, log, 079, writes, test, interview      0.516005     0.032328              10        0.037818      0.261463       0.708479

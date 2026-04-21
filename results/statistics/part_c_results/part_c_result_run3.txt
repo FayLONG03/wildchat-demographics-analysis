@@ -1,0 +1,30 @@
+Part C Result Snapshot Run 3 (Experiment 2: Spearman + Covariates)
+
+Data prep summary
+- states in merged analysis: 36 | topics: 76 | total Spearman tests: 152
+- significant after FDR: income=3, education=2, total=5
+- income-education Spearman across included states: rho=0.905, p=3.342e-14
+
+Top |rho| topics for income
+   topic                                                                                   top_words  spearman_rho  p_value  fdr_q_value  significant_fdr
+topic_51    detailed, prompt, description, detailed description, ar, coffee, ai, composition focused      0.571180 0.000275     0.020862             True
+topic_60 detailed, description, detailed description, ar, prompt, description scenes, scenes, coffee      0.517187 0.001238     0.032328             True
+topic_63                                      scp, dr, researcher, log, 079, writes, test, interview      0.516005 0.001276     0.032328             True
+topic_25 detailed, description, detailed description, ar, prompt, description scenes, scenes, coffee      0.444485 0.006609     0.125562            False
+topic_64                               galaxy, image, markdown, images, generate, draw, picture, url     -0.430183 0.008825     0.134144            False
+
+Top |rho| topics for education
+   topic                                                                                   top_words  spearman_rho  p_value  fdr_q_value  significant_fdr
+topic_63                                      scp, dr, researcher, log, 079, writes, test, interview      0.532860 0.000820     0.046365             True
+topic_64                               galaxy, image, markdown, images, generate, draw, picture, url     -0.517755 0.001220     0.046365             True
+topic_53                                sonic, game, games, names, super, theory, video games, mario      0.439919 0.007257     0.129857            False
+topic_60 detailed, description, detailed description, ar, prompt, description scenes, scenes, coffee      0.439248 0.007357     0.129857            False
+topic_51    detailed, prompt, description, detailed description, ar, coffee, ai, composition focused      0.431819 0.008543     0.129857            False
+
+FDR-significant topic-covariate links
+covariate    topic                                                                                   top_words  spearman_rho  p_value  fdr_q_value
+education topic_63                                      scp, dr, researcher, log, 079, writes, test, interview      0.532860 0.000820     0.046365
+education topic_64                               galaxy, image, markdown, images, generate, draw, picture, url     -0.517755 0.001220     0.046365
+   income topic_51    detailed, prompt, description, detailed description, ar, coffee, ai, composition focused      0.571180 0.000275     0.020862
+   income topic_60 detailed, description, detailed description, ar, prompt, description scenes, scenes, coffee      0.517187 0.001238     0.032328
+   income topic_63                                      scp, dr, researcher, log, 079, writes, test, interview      0.516005 0.001276     0.032328

@@ -62,6 +62,40 @@ and UMAP `n_neighbors` (10, 15). Each run was evaluated on topic coherence
 
 ## Section 3: Word Statistics
 
+Section 3 now includes a reproducible Part C pipeline for:
+
+1. state-topic concentration and ranking summaries,
+2. weighted log-odds comparisons for each state vs. the rest of states,
+3. permutation-based significance tests of topic heterogeneity across states.
+
+### Required input data
+
+- `data/state_topic_proportions.parquet`
+- `data/wildchat_bertopic.parquet`
+- `data/wildchat_log_odds.parquet`
+
+### Run all Part C analyses
+
+```bash
+python src/statistics/run_part_c.py \
+  --topic-proportions data/state_topic_proportions.parquet \
+  --state-docs-input data/wildchat_bertopic.parquet \
+  --log-odds-input data/wildchat_log_odds.parquet \
+  --output-dir results/statistics
+```
+
+### Output files
+
+- `results/statistics/state_topic_long.csv`
+- `results/statistics/topic_variation_by_state.csv`
+- `results/statistics/state_topic_top_5_states.csv`
+- `results/statistics/state_topic_bottom_5_states.csv`
+- `results/statistics/topic_state_heterogeneity_significance.csv`
+- `results/statistics/topic_state_heterogeneity_significant.csv`
+- `results/statistics/log_odds_state_vs_rest_top_50.csv`
+- `results/statistics/log_odds_state_vs_rest_bottom_50.csv`
+- `results/statistics/log_odds_<STATE>_vs_rest.csv` for each included state
+
 ---
 
 ## Section 4: Qualitative Analysis

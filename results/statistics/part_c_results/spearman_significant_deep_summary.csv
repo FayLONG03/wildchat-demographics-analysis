@@ -1,0 +1,6 @@
+covariate,topic,spearman_rho,p_value,n_states,fdr_q_value,significant_fdr,top_words,nonzero_states,max_topic_prop,rho_ci95_low,rho_ci95_high
+education,topic_63,0.5328603693040082,0.0008203563370503,36,0.0463654773459526,True,"scp, dr, researcher, log, 079, writes, test, interview",10,0.0378181818181818,0.26206070430467954,0.7242780232565112
+education,topic_64,-0.5177551087670571,0.0012201441406829,36,0.0463654773459526,True,"galaxy, image, markdown, images, generate, draw, picture, url",31,0.075,-0.7680680627211792,-0.17909715665896392
+income,topic_51,0.5711804444442046,0.0002745014670719,36,0.0208621114974699,True,"detailed, prompt, description, detailed description, ar, coffee, ai, composition focused",15,0.0323741007194244,0.30665940445042394,0.7739862419108239
+income,topic_60,0.5171872110979268,0.001238052624216,36,0.0323277021441093,True,"detailed, description, detailed description, ar, prompt, description scenes, scenes, coffee",14,0.0327868852459016,0.22806126206364213,0.7414181057088179
+income,topic_63,0.516004525390542,0.0012760935056885,36,0.0323277021441093,True,"scp, dr, researcher, log, 079, writes, test, interview",10,0.0378181818181818,0.26146340076201413,0.7084786161037545
