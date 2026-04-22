@@ -28,3 +28,6 @@ build/
 # IDE
 .vscode/
 .idea/
+
+# Large binary data files
+*.parquet
