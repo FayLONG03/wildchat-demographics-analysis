@@ -1,0 +1,77 @@
+topic_id,topic_label,super_topic,label_confidence,unsure_flag
+0,Sports Script Writing,Creative Writing & Roleplay,Medium,0
+1,DDLC Fan Fiction,Creative Writing & Roleplay,High,0
+2,Translation & Word Meanings,Information/Trivia & Explanatory QA,Medium,1
+3,Political History Questions,"Politics, Religion, and Society",High,0
+4,AI Art Prompting,"Media, Art, and Entertainment",High,0
+5,Monster-Girl Roleplay,Creative Writing & Roleplay,Medium,1
+6,Math Problem Solving,Education & Homework,Medium,0
+7,Fetish Comedy Stories,Creative Writing & Roleplay,High,0
+8,Career Resume Help,Career & Professional Writing,High,0
+9,Scam-Baiting Emails,"Finance, Law, and Practical Life",High,0
+10,Adult Fantasy Fiction,Creative Writing & Roleplay,Medium,1
+11,Fan Crossover Shipping,Creative Writing & Roleplay,High,0
+12,Chemistry Homework Help,Education & Homework,High,0
+13,Social Media Copy,Career & Professional Writing,Medium,0
+14,Personal Finance Questions,"Finance, Law, and Practical Life",High,0
+15,Music Theory Help,Education & Homework,Medium,0
+16,Programming Help,Coding & Technical Help,High,0
+17,Religion & Theology,"Politics, Religion, and Society",High,0
+18,Versus Battle Scenarios,"Media, Art, and Entertainment",High,0
+19,Biology & Health Questions,"Health, Biology, and Medicine",Medium,1
+20,AI Concept Questions,Information/Trivia & Explanatory QA,High,0
+21,Relationship Message Help,Personal Advice & Communication,High,0
+22,Web Development Help,Coding & Technical Help,High,0
+23,Professional Email Writing,Career & Professional Writing,High,0
+24,Python Troubleshooting,Coding & Technical Help,High,0
+25,AI Art Prompting,"Media, Art, and Entertainment",High,0
+26,Product Listing Copy,Career & Professional Writing,High,0
+27,Azur Lane Roleplay,Creative Writing & Roleplay,High,0
+28,DC Character Concepts,"Media, Art, and Entertainment",High,0
+29,Rivalry Fight Fiction,Creative Writing & Roleplay,High,0
+30,Simple Greeting,Personal Advice & Communication,High,0
+31,ChatGPT/OpenAI Help,Coding & Technical Help,High,0
+32,Casual Conversation Opening,Personal Advice & Communication,High,0
+33,Food & Recipe Help,"Finance, Law, and Practical Life",Medium,0
+34,Literary Analysis Help,Education & Homework,High,0
+35,Simple Greeting,Personal Advice & Communication,High,0
+36,Mind & Consciousness,Information/Trivia & Explanatory QA,High,0
+37,Prompt Jailbreak Attempts,Coding & Technical Help,High,0
+38,Essay Writing Help,Education & Homework,High,0
+39,Song Lyric Writing,Creative Writing & Roleplay,High,0
+40,Poetry Writing Help,Creative Writing & Roleplay,Medium,0
+41,Real Estate Writing,Career & Professional Writing,High,0
+42,Customer Service Emails,Career & Professional Writing,High,0
+43,WordGirl Fan Fiction,Creative Writing & Roleplay,High,0
+44,Cartoon Crossover Concepts,"Media, Art, and Entertainment",High,0
+45,Mixed/Unclear: animals/images,Information/Trivia & Explanatory QA,Low,1
+46,Brand Name Ideation,Career & Professional Writing,High,0
+47,Computer Tech Support,Coding & Technical Help,Medium,0
+48,Physics Problem Solving,Education & Homework,High,0
+49,Mixed/Unclear: year/date mix,Information/Trivia & Explanatory QA,Low,1
+50,China History/Politics,"Politics, Religion, and Society",High,0
+51,AI Art Prompting,"Media, Art, and Entertainment",High,0
+52,Fantasy Crossover Fanfiction,Creative Writing & Roleplay,High,0
+53,Game Concept Ideation,"Media, Art, and Entertainment",High,0
+54,SQL Query Help,Coding & Technical Help,High,0
+55,Image Prompt Expansion,"Media, Art, and Entertainment",High,0
+56,Mental Health Questions,"Health, Biology, and Medicine",High,0
+57,Game Dev Scripting,Coding & Technical Help,High,0
+58,Battery/Vehicle Questions,"Finance, Law, and Practical Life",Medium,1
+59,Character Fusion Descriptions,"Media, Art, and Entertainment",High,0
+60,AI Art Prompting,"Media, Art, and Entertainment",High,0
+61,Short Reply Generation,Personal Advice & Communication,High,0
+62,Education Research Writing,Education & Homework,High,0
+63,SCP Creative Writing,Creative Writing & Roleplay,High,0
+64,Image Generation Requests,"Media, Art, and Entertainment",High,0
+65,Time & Space Questions,Information/Trivia & Explanatory QA,Medium,1
+66,Cast List Generation,"Media, Art, and Entertainment",High,0
+67,Jokes & Humor,"Media, Art, and Entertainment",High,0
+68,Name & Person Lookup,Information/Trivia & Explanatory QA,Medium,0
+69,Travel Planning Help,"Finance, Law, and Practical Life",High,0
+70,Art History Questions,"Media, Art, and Entertainment",High,0
+71,Konosuba Fan Fiction,Creative Writing & Roleplay,High,0
+72,AI Art Prompting,"Media, Art, and Entertainment",High,0
+73,Warcraft Fan Fiction,Creative Writing & Roleplay,High,0
+74,Tattoo SEO Writing,Career & Professional Writing,High,0
+75,Wizard101 Fan Fiction,Creative Writing & Roleplay,High,0

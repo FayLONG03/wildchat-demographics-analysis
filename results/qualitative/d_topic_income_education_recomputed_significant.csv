@@ -1,0 +1,6 @@
+covariate,topic,spearman_rho,p_value,n_states,fdr_q_value,significant_fdr,topic_id,topic_label,super_topic,label_confidence,unsure_flag
+education,topic_63,0.5328603693040082,0.0008203563370503137,36,0.046365477345952685,True,63,SCP Creative Writing,Creative Writing & Roleplay,High,0
+education,topic_64,-0.5177551087670571,0.0012201441406829653,36,0.046365477345952685,True,64,Image Generation Requests,"Media, Art, and Entertainment",High,0
+income,topic_51,0.5711804444442046,0.000274501467071973,36,0.02086211149746995,True,51,AI Art Prompting,"Media, Art, and Entertainment",High,0
+income,topic_60,0.5171872110979268,0.0012380526242160858,36,0.032327702144109384,True,60,AI Art Prompting,"Media, Art, and Entertainment",High,0
+income,topic_63,0.516004525390542,0.0012760935056885284,36,0.032327702144109384,True,63,SCP Creative Writing,Creative Writing & Roleplay,High,0

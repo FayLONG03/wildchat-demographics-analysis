@@ -1,0 +1,72 @@
+topic_label_merged,weighted_prevalence,merged_topic_id,super_topic,constituent_topics
+AI Art Prompting,0.0700142260284448,merged_topic_0,"Media, Art, and Entertainment",topic_25|topic_4|topic_51|topic_60|topic_72
+Translation & Word Meanings,0.067081077234931,merged_topic_1,Information/Trivia & Explanatory QA,topic_2
+Sports Script Writing,0.0640359953665879,merged_topic_2,Creative Writing & Roleplay,topic_0
+Political History Questions,0.0513817193274079,merged_topic_3,"Politics, Religion, and Society",topic_3
+DDLC Fan Fiction,0.0505871372164266,merged_topic_4,Creative Writing & Roleplay,topic_1
+Math Problem Solving,0.036076673515912,merged_topic_5,Education & Homework,topic_6
+Career Resume Help,0.0312227889381597,merged_topic_6,Career & Professional Writing,topic_8
+Monster-Girl Roleplay,0.0285289671215264,merged_topic_7,Creative Writing & Roleplay,topic_5
+Fetish Comedy Stories,0.0245319487731726,merged_topic_8,Creative Writing & Roleplay,topic_7
+Adult Fantasy Fiction,0.0245164470183345,merged_topic_9,Creative Writing & Roleplay,topic_10
+Scam-Baiting Emails,0.0223864915449526,merged_topic_10,"Finance, Law, and Practical Life",topic_9
+Chemistry Homework Help,0.0212800183019003,merged_topic_11,Education & Homework,topic_12
+Simple Greeting,0.020891528663313702,merged_topic_12,Personal Advice & Communication,topic_30|topic_35
+Fan Crossover Shipping,0.0208195662558719,merged_topic_13,Creative Writing & Roleplay,topic_11
+Programming Help,0.0198495407950605,merged_topic_14,Coding & Technical Help,topic_16
+Social Media Copy,0.0190346486815296,merged_topic_15,Career & Professional Writing,topic_13
+Personal Finance Questions,0.018856457276817,merged_topic_16,"Finance, Law, and Practical Life",topic_14
+Music Theory Help,0.0182674150219295,merged_topic_17,Education & Homework,topic_15
+AI Concept Questions,0.0169436145812433,merged_topic_18,Information/Trivia & Explanatory QA,topic_20
+Biology & Health Questions,0.0168833185292645,merged_topic_19,"Health, Biology, and Medicine",topic_19
+Versus Battle Scenarios,0.015876711822647,merged_topic_20,"Media, Art, and Entertainment",topic_18
+Religion & Theology,0.0158291651196989,merged_topic_21,"Politics, Religion, and Society",topic_17
+Web Development Help,0.0157300712435026,merged_topic_22,Coding & Technical Help,topic_22
+Python Troubleshooting,0.014241610171438,merged_topic_23,Coding & Technical Help,topic_24
+Relationship Message Help,0.014132795877069,merged_topic_24,Personal Advice & Communication,topic_21
+Professional Email Writing,0.0136109611635485,merged_topic_25,Career & Professional Writing,topic_23
+DC Character Concepts,0.0118408496070179,merged_topic_26,"Media, Art, and Entertainment",topic_28
+Product Listing Copy,0.0117512321822322,merged_topic_27,Career & Professional Writing,topic_26
+ChatGPT/OpenAI Help,0.0113202343458893,merged_topic_28,Coding & Technical Help,topic_31
+Casual Conversation Opening,0.0112825396630961,merged_topic_29,Personal Advice & Communication,topic_32
+Rivalry Fight Fiction,0.0109494583396071,merged_topic_30,Creative Writing & Roleplay,topic_29
+Food & Recipe Help,0.010567099094168,merged_topic_31,"Finance, Law, and Practical Life",topic_33
+Literary Analysis Help,0.0099508410946345,merged_topic_32,Education & Homework,topic_34
+Mind & Consciousness,0.0084993426709221,merged_topic_33,Information/Trivia & Explanatory QA,topic_36
+Prompt Jailbreak Attempts,0.0080994074330856,merged_topic_34,Coding & Technical Help,topic_37
+Essay Writing Help,0.0077330135879678,merged_topic_35,Education & Homework,topic_38
+Azur Lane Roleplay,0.0074359650596894,merged_topic_36,Creative Writing & Roleplay,topic_27
+Song Lyric Writing,0.0073094859594498,merged_topic_37,Creative Writing & Roleplay,topic_39
+Real Estate Writing,0.0072713769166661,merged_topic_38,Career & Professional Writing,topic_41
+Poetry Writing Help,0.0071504102905748,merged_topic_39,Creative Writing & Roleplay,topic_40
+Cartoon Crossover Concepts,0.0069187859457682,merged_topic_40,"Media, Art, and Entertainment",topic_44
+Brand Name Ideation,0.0063213102499718,merged_topic_41,Career & Professional Writing,topic_46
+Customer Service Emails,0.0062676459661587,merged_topic_42,Career & Professional Writing,topic_42
+Character Fusion Descriptions,0.0060674694836418,merged_topic_43,"Media, Art, and Entertainment",topic_59
+Computer Tech Support,0.0060252666753344,merged_topic_44,Coding & Technical Help,topic_47
+Physics Problem Solving,0.005918330099464,merged_topic_45,Education & Homework,topic_48
+Mixed/Unclear: animals/images,0.005861448900084,merged_topic_46,Information/Trivia & Explanatory QA,topic_45
+China History/Politics,0.0053021071206685,merged_topic_47,"Politics, Religion, and Society",topic_50
+Mixed/Unclear: year/date mix,0.0052274829132422,merged_topic_48,Information/Trivia & Explanatory QA,topic_49
+Game Concept Ideation,0.005192838047072,merged_topic_49,"Media, Art, and Entertainment",topic_53
+Mental Health Questions,0.0049513743167837,merged_topic_50,"Health, Biology, and Medicine",topic_56
+Battery/Vehicle Questions,0.0047420642101954,merged_topic_51,"Finance, Law, and Practical Life",topic_58
+Image Prompt Expansion,0.0046157826430115,merged_topic_52,"Media, Art, and Entertainment",topic_55
+Image Generation Requests,0.0045555818724727,merged_topic_53,"Media, Art, and Entertainment",topic_64
+Cast List Generation,0.0042259191542981,merged_topic_54,"Media, Art, and Entertainment",topic_66
+Jokes & Humor,0.0041678412369403,merged_topic_55,"Media, Art, and Entertainment",topic_67
+SQL Query Help,0.0040549967155432,merged_topic_56,Coding & Technical Help,topic_54
+Education Research Writing,0.0040420681398347,merged_topic_57,Education & Homework,topic_62
+WordGirl Fan Fiction,0.0039770661992141,merged_topic_58,Creative Writing & Roleplay,topic_43
+Short Reply Generation,0.0039183737368565,merged_topic_59,Personal Advice & Communication,topic_61
+SCP Creative Writing,0.003865247066643,merged_topic_60,Creative Writing & Roleplay,topic_63
+Time & Space Questions,0.0037402934850717,merged_topic_61,Information/Trivia & Explanatory QA,topic_65
+Art History Questions,0.0037204332060989,merged_topic_62,"Media, Art, and Entertainment",topic_70
+Travel Planning Help,0.003692662117296,merged_topic_63,"Finance, Law, and Practical Life",topic_69
+Name & Person Lookup,0.0035280481868101,merged_topic_64,Information/Trivia & Explanatory QA,topic_68
+Fantasy Crossover Fanfiction,0.0033434280251832,merged_topic_65,Creative Writing & Roleplay,topic_52
+Game Dev Scripting,0.0030974629174679,merged_topic_66,Coding & Technical Help,topic_57
+Tattoo SEO Writing,0.0029005078672704,merged_topic_67,Career & Professional Writing,topic_74
+Konosuba Fan Fiction,0.002192633671844,merged_topic_68,Creative Writing & Roleplay,topic_71
+Warcraft Fan Fiction,0.0019679045890787,merged_topic_69,Creative Writing & Roleplay,topic_73
+Wizard101 Fan Fiction,0.0018254734049853,merged_topic_70,Creative Writing & Roleplay,topic_75

@@ -1,0 +1,5 @@
+topic_label,super_topic,abs_rho,spearman_rho,ci_sig,fdr_q_value,n_subtopics,ctm_topic_id,jaccard
+Game Concept Ideation,"Media, Art, and Entertainment",0.4399192099404694,0.4399192099404694,True,0.1717567422433704,1,59,0.0588
+SCP Creative Writing,Creative Writing & Roleplay,0.5328603693040082,0.5328603693040082,True,0.0433151169942452,1,36,0.0588
+Image Generation Requests,"Media, Art, and Entertainment",0.5177551087670571,-0.5177551087670571,True,0.0433151169942452,1,55,0.0588
+AI Art Prompting,"Media, Art, and Entertainment",0.3998712998979897,0.3998712998979897,True,0.2840007935455234,5,-1,0.0

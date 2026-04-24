@@ -1,0 +1,3 @@
+model,n_topics,coherence_cv,diversity,outlier_rate,notes
+BERTopic (run_04),76,0.5806,0.8408,0.4493,"min_topic_size=100, n_neighbors=15"
+CombinedTM,76,0.4821,0.6132,,"n_components=76, epochs=100"

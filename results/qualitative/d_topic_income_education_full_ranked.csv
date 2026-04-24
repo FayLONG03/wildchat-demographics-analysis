@@ -1,0 +1,153 @@
+covariate,topic,spearman_rho,p_value,n_states,fdr_q_value,significant_fdr,topic_id,topic_label,super_topic,label_confidence,unsure_flag
+education,topic_63,0.5328603693040082,0.0008203563370503137,36,0.046365477345952685,True,63,SCP Creative Writing,Creative Writing & Roleplay,High,0
+education,topic_64,-0.5177551087670571,0.0012201441406829653,36,0.046365477345952685,True,64,Image Generation Requests,"Media, Art, and Entertainment",High,0
+education,topic_53,0.43991920994046946,0.0072573271370438225,36,0.12985706467000624,False,53,Game Concept Ideation,"Media, Art, and Entertainment",High,0
+education,topic_60,0.4392482235498106,0.007357135075969218,36,0.12985706467000624,False,60,AI Art Prompting,"Media, Art, and Entertainment",High,0
+education,topic_51,0.4318185517826768,0.0085432279388162,36,0.12985706467000624,False,51,AI Art Prompting,"Media, Art, and Entertainment",High,0
+education,topic_13,0.3712652514807285,0.02579184727476573,36,0.3266967321470326,False,13,Social Media Copy,Career & Professional Writing,Medium,0
+education,topic_62,0.353907215209371,0.03421093053688065,36,0.3714329601147042,False,62,Education Research Writing,Education & Homework,High,0
+education,topic_36,0.3439439593301266,0.03997849593337541,36,0.37979571136706636,False,36,Mind & Consciousness,Information/Trivia & Explanatory QA,High,0
+education,topic_6,-0.2974834272751102,0.07806163439421551,36,0.5483257938210063,False,6,Math Problem Solving,Education & Homework,Medium,0
+education,topic_74,0.2964024047443571,0.07920163739080419,36,0.5483257938210063,False,74,Tattoo SEO Writing,Career & Professional Writing,High,0
+education,topic_54,0.29453935173192575,0.08119663156933243,36,0.5483257938210063,False,54,SQL Query Help,Coding & Technical Help,High,0
+education,topic_52,-0.2896850674394713,0.08657775691910626,36,0.5483257938210063,False,52,Fantasy Crossover Fanfiction,Creative Writing & Roleplay,High,0
+education,topic_25,0.27440609375604585,0.10531993297947637,36,0.6157165312646311,False,25,AI Art Prompting,"Media, Art, and Entertainment",High,0
+education,topic_26,0.26136450644952847,0.12362209975581932,36,0.6497040315262005,False,26,Product Listing Copy,Career & Professional Writing,High,0
+education,topic_43,0.2566993379990658,0.13071378486356477,36,0.6497040315262005,False,43,WordGirl Fan Fiction,Creative Writing & Roleplay,High,0
+education,topic_7,0.2496498924446868,0.14199522612921922,36,0.6497040315262005,False,7,Fetish Comedy Stories,Creative Writing & Roleplay,High,0
+education,topic_50,0.24764610926549183,0.14532853336770274,36,0.6497040315262005,False,50,China History/Politics,"Politics, Religion, and Society",High,0
+education,topic_72,0.2330511193982802,0.17134988452390215,36,0.6627750968129021,False,72,AI Art Prompting,"Media, Art, and Entertainment",High,0
+education,topic_35,-0.22353092663921628,0.19002423956091796,36,0.6627750968129021,False,35,Simple Greeting,Personal Advice & Communication,High,0
+education,topic_33,-0.20698557551388677,0.22579795165570332,36,0.6627750968129021,False,33,Food & Recipe Help,"Finance, Law, and Practical Life",Medium,0
+education,topic_23,0.19634350619796542,0.2510926753561917,36,0.6627750968129021,False,23,Professional Email Writing,Career & Professional Writing,High,0
+education,topic_27,0.19470838517394856,0.25514005192598643,36,0.6627750968129021,False,27,Azur Lane Roleplay,Creative Writing & Roleplay,High,0
+education,topic_4,0.1924910095752337,0.26069751407283714,36,0.6627750968129021,False,4,AI Art Prompting,"Media, Art, and Entertainment",High,0
+education,topic_48,0.19240157195500684,0.26092333842136484,36,0.6627750968129021,False,48,Physics Problem Solving,Education & Homework,High,0
+education,topic_59,0.19046860973130822,0.26583552378366354,36,0.6627750968129021,False,59,Character Fusion Descriptions,"Media, Art, and Entertainment",High,0
+education,topic_2,0.19001029866117405,0.26700907562713166,36,0.6627750968129021,False,2,Translation & Word Meanings,Information/Trivia & Explanatory QA,Medium,1
+education,topic_42,0.18588484292001697,0.27772577567567,36,0.6627750968129021,False,42,Customer Service Emails,Career & Professional Writing,High,0
+education,topic_39,-0.18585782992108552,0.2777968559864843,36,0.6627750968129021,False,39,Song Lyric Writing,Creative Writing & Roleplay,High,0
+education,topic_34,-0.1828954390075824,0.28566371076941677,36,0.6627750968129021,False,34,Literary Analysis Help,Education & Homework,High,0
+education,topic_29,0.18268013296432653,0.286241021647327,36,0.6627750968129021,False,29,Rivalry Fight Fiction,Creative Writing & Roleplay,High,0
+education,topic_16,0.18135178950735792,0.2898194125063779,36,0.6627750968129021,False,16,Programming Help,Coding & Technical Help,High,0
+education,topic_9,0.17930501892445969,0.29538921417172864,36,0.6627750968129021,False,9,Scam-Baiting Emails,"Finance, Law, and Practical Life",High,0
+education,topic_3,0.17841282137745684,0.2978383985175308,36,0.6627750968129021,False,3,Political History Questions,"Politics, Religion, and Society",High,0
+education,topic_38,-0.17721367766599894,0.3011505363736312,36,0.6627750968129021,False,38,Essay Writing Help,Education & Homework,High,0
+education,topic_68,0.17574985340031277,0.30522537353225754,36,0.6627750968129021,False,68,Name & Person Lookup,Information/Trivia & Explanatory QA,Medium,0
+education,topic_49,0.1720117831807987,0.3157887060437331,36,0.6666650460923255,False,49,Mixed/Unclear: year/date mix,Information/Trivia & Explanatory QA,Low,1
+education,topic_46,0.1666925778857394,0.3312102412922492,36,0.6803237388705659,False,46,Brand Name Ideation,Career & Professional Writing,High,0
+education,topic_56,-0.16034725582791193,0.35020382526537264,36,0.6833690266844745,False,56,Mental Health Questions,"Health, Biology, and Medicine",High,0
+education,topic_17,0.15431186980748923,0.3688686282814048,36,0.6833690266844745,False,17,Religion & Theology,"Politics, Religion, and Society",High,0
+education,topic_67,0.15020940359834695,0.38188643983488074,36,0.6833690266844745,False,67,Jokes & Humor,"Media, Art, and Entertainment",High,0
+education,topic_30,-0.1491826502254021,0.3851860938433381,36,0.6833690266844745,False,30,Simple Greeting,Personal Advice & Communication,High,0
+education,topic_69,0.14898137601811726,0.3858348693476932,36,0.6833690266844745,False,69,Travel Planning Help,"Finance, Law, and Practical Life",High,0
+education,topic_22,0.14841990118918305,0.3876480605008952,36,0.6833690266844745,False,22,Web Development Help,Coding & Technical Help,High,0
+education,topic_32,-0.1459647328348628,0.3956346996594326,36,0.6833690266844745,False,32,Casual Conversation Opening,Personal Advice & Communication,High,0
+education,topic_61,0.14106349631582926,0.41185933313392553,36,0.6842287392899725,False,61,Short Reply Generation,Personal Advice & Communication,High,0
+education,topic_5,-0.14038387532842103,0.4141384474649834,36,0.6842287392899725,False,5,Monster-Girl Roleplay,Creative Writing & Roleplay,Medium,1
+education,topic_37,-0.13555612770339856,0.4305321306184127,36,0.6961796154680716,False,37,Prompt Jailbreak Attempts,Coding & Technical Help,High,0
+education,topic_66,-0.12676830258521418,0.46127637807902155,36,0.7303542652917842,False,66,Cast List Generation,"Media, Art, and Entertainment",High,0
+education,topic_47,0.12362536151681838,0.4725494273852024,36,0.732933805740314,False,47,Computer Tech Support,Coding & Technical Help,Medium,0
+education,topic_58,0.09998610582937122,0.561778670993532,36,0.8320828312501882,False,58,Battery/Vehicle Questions,"Finance, Law, and Practical Life",Medium,1
+education,topic_57,0.09680127724059769,0.5743669991853415,36,0.8320828312501882,False,57,Game Dev Scripting,Coding & Technical Help,High,0
+education,topic_70,0.09115969240117071,0.5969732307306732,36,0.8320828312501882,False,70,Art History Questions,"Media, Art, and Entertainment",High,0
+education,topic_10,-0.07663050322115368,0.6568902837595116,36,0.8320828312501882,False,10,Adult Fantasy Fiction,Creative Writing & Roleplay,Medium,1
+education,topic_18,-0.07236573562674548,0.6749080369961273,36,0.8320828312501882,False,18,Versus Battle Scenarios,"Media, Art, and Entertainment",High,0
+education,topic_0,-0.06916538785005052,0.6885473915247833,36,0.8320828312501882,False,0,Sports Script Writing,Creative Writing & Roleplay,Medium,0
+education,topic_24,0.06908355972210066,0.688897423233895,36,0.8320828312501882,False,24,Python Troubleshooting,Coding & Technical Help,High,0
+education,topic_8,0.06731883181008223,0.696461678433504,36,0.8320828312501882,False,8,Career Resume Help,Career & Professional Writing,High,0
+education,topic_1,0.06666902877100545,0.6992542920519768,36,0.8320828312501882,False,1,DDLC Fan Fiction,Creative Writing & Roleplay,High,0
+education,topic_71,0.06643274775113028,0.7002707071392463,36,0.8320828312501882,False,71,Konosuba Fan Fiction,Creative Writing & Roleplay,High,0
+education,topic_28,0.06571661407427679,0.7033544413059205,36,0.8320828312501882,False,28,DC Character Concepts,"Media, Art, and Entertainment",High,0
+education,topic_65,0.06453882746546594,0.7084362237252199,36,0.8320828312501882,False,65,Time & Space Questions,Information/Trivia & Explanatory QA,Medium,1
+education,topic_73,-0.06255479213475144,0.7170247164679966,36,0.8320828312501882,False,73,Warcraft Fan Fiction,Creative Writing & Roleplay,High,0
+education,topic_40,-0.06212144918909927,0.718905170357621,36,0.8320828312501882,False,40,Poetry Writing Help,Creative Writing & Roleplay,Medium,0
+education,topic_11,-0.05998807618428615,0.7281862838766359,36,0.8320828312501882,False,11,Fan Crossover Shipping,Creative Writing & Roleplay,High,0
+education,topic_31,-0.05148999173952579,0.7655239798087616,36,0.8320828312501882,False,31,ChatGPT/OpenAI Help,Coding & Technical Help,High,0
+education,topic_44,-0.05119041928979565,0.7668503011262586,36,0.8320828312501882,False,44,Cartoon Crossover Concepts,"Media, Art, and Entertainment",High,0
+education,topic_75,0.049767539468124594,0.7731587846594908,36,0.8320828312501882,False,75,Wizard101 Fan Fiction,Creative Writing & Roleplay,High,0
+education,topic_45,0.04782000797600557,0.7818165466082913,36,0.8320828312501882,False,45,Mixed/Unclear: animals/images,Information/Trivia & Explanatory QA,Low,1
+education,topic_21,0.047527054220984445,0.7831211391585909,36,0.8320828312501882,False,21,Relationship Message Help,Personal Advice & Communication,High,0
+education,topic_41,0.04649376772873206,0.7877272386324274,36,0.8320828312501882,False,41,Real Estate Writing,Career & Professional Writing,High,0
+education,topic_55,0.046446261971296136,0.7879391777773176,36,0.8320828312501882,False,55,Image Prompt Expansion,"Media, Art, and Entertainment",High,0
+education,topic_20,0.04636785777657018,0.7882889980264941,36,0.8320828312501882,False,20,AI Concept Questions,Information/Trivia & Explanatory QA,High,0
+education,topic_14,-0.0432599462836173,0.8021879157404734,36,0.8351545424147395,False,14,Personal Finance Questions,"Finance, Law, and Practical Life",High,0
+education,topic_15,0.01572430573500589,0.9274753438007056,36,0.9525422449845085,False,15,Music Theory Help,Education & Homework,Medium,0
+education,topic_19,-0.0072132426621196975,0.9666959786390613,36,0.9795852583542487,False,19,Biology & Health Questions,"Health, Biology, and Medicine",Medium,1
+education,topic_12,-0.0012889099048221488,0.9940474184855972,36,0.9940474184855973,False,12,Chemistry Homework Help,Education & Homework,High,0
+income,topic_51,0.5711804444442046,0.000274501467071973,36,0.02086211149746995,True,51,AI Art Prompting,"Media, Art, and Entertainment",High,0
+income,topic_60,0.5171872110979268,0.0012380526242160858,36,0.032327702144109384,True,60,AI Art Prompting,"Media, Art, and Entertainment",High,0
+income,topic_63,0.516004525390542,0.0012760935056885284,36,0.032327702144109384,True,63,SCP Creative Writing,Creative Writing & Roleplay,High,0
+income,topic_25,0.4444846353929747,0.006608525976344486,36,0.12556199355054523,False,25,AI Art Prompting,"Media, Art, and Entertainment",High,0
+income,topic_64,-0.43018275096378455,0.008825230979747408,36,0.13414351089216062,False,64,Image Generation Requests,"Media, Art, and Entertainment",High,0
+income,topic_72,0.41964754721893627,0.01083851135390197,36,0.1372878104827583,False,72,AI Art Prompting,"Media, Art, and Entertainment",High,0
+income,topic_74,0.3987478494122898,0.016000044706790048,36,0.17371477110229194,False,74,Tattoo SEO Writing,Career & Professional Writing,High,0
+income,topic_62,0.3849072043838902,0.020446556433188674,36,0.1772676050789851,False,62,Education Research Writing,Education & Homework,High,0
+income,topic_4,0.38338707239816916,0.020992216390932447,36,0.1772676050789851,False,4,AI Art Prompting,"Media, Art, and Entertainment",High,0
+income,topic_53,0.3501666556029527,0.03629098221098943,36,0.27581146480351965,False,53,Game Concept Ideation,"Media, Art, and Entertainment",High,0
+income,topic_13,0.3356781283555371,0.04534007245649088,36,0.31325868242666427,False,13,Social Media Copy,Career & Professional Writing,Medium,0
+income,topic_52,-0.3081702079237118,0.067466194034148,36,0.427285895549604,False,52,Fantasy Crossover Fanfiction,Creative Writing & Roleplay,High,0
+income,topic_48,0.2953187267816304,0.0803573752411385,36,0.46978157833280976,False,48,Physics Problem Solving,Education & Homework,High,0
+income,topic_54,0.28515903416640703,0.0918388930294313,36,0.4985539907311985,False,54,SQL Query Help,Coding & Technical Help,High,0
+income,topic_26,0.27175203616759847,0.10886711991360472,36,0.5383656107600943,False,26,Product Listing Copy,Career & Professional Writing,High,0
+income,topic_50,0.26673555661857196,0.11581716744827229,36,0.5383656107600943,False,50,China History/Politics,"Politics, Religion, and Society",High,0
+income,topic_16,0.25837358256732224,0.12813485828969023,36,0.5383656107600943,False,16,Programming Help,Coding & Technical Help,High,0
+income,topic_43,0.2574620260506847,0.12953424982137315,36,0.5383656107600943,False,43,WordGirl Fan Fiction,Creative Writing & Roleplay,High,0
+income,topic_36,0.2509397136722129,0.13987947613027527,36,0.5383656107600943,False,36,Mind & Consciousness,Information/Trivia & Explanatory QA,High,0
+income,topic_42,0.2461528794086503,0.14784948674708018,36,0.5383656107600943,False,42,Customer Service Emails,Career & Professional Writing,High,0
+income,topic_38,-0.24561876064378405,0.14875891876265762,36,0.5383656107600943,False,38,Essay Writing Help,Education & Homework,High,0
+income,topic_2,0.2240957670771571,0.1888778975030527,36,0.6524872822832729,False,2,Translation & Word Meanings,Information/Trivia & Explanatory QA,Medium,1
+income,topic_27,0.21399682306941933,0.2101163157262897,36,0.6799815565092676,False,27,Azur Lane Roleplay,Creative Writing & Roleplay,High,0
+income,topic_35,-0.20554733294381344,0.2291108412852253,36,0.6799815565092676,False,35,Simple Greeting,Personal Advice & Communication,High,0
+income,topic_39,-0.20412109833762115,0.23242854516740458,36,0.6799815565092676,False,39,Song Lyric Writing,Creative Writing & Roleplay,High,0
+income,topic_58,0.20371904852570843,0.23336964520863687,36,0.6799815565092676,False,58,Battery/Vehicle Questions,"Finance, Law, and Practical Life",Medium,1
+income,topic_6,-0.19602291050308573,0.2518828457470506,36,0.6799815565092676,False,6,Math Problem Solving,Education & Homework,Medium,0
+income,topic_23,0.1887229722695481,0.27032358341298235,36,0.6799815565092676,False,23,Professional Email Writing,Career & Professional Writing,High,0
+income,topic_37,-0.18689664204252276,0.2750719091502836,36,0.6799815565092676,False,37,Prompt Jailbreak Attempts,Coding & Technical Help,High,0
+income,topic_9,0.18666413842511198,0.27568027891541685,36,0.6799815565092676,False,9,Scam-Baiting Emails,"Finance, Law, and Practical Life",High,0
+income,topic_5,-0.17952253318357453,0.2947940715449026,36,0.6799815565092676,False,5,Monster-Girl Roleplay,Creative Writing & Roleplay,Medium,1
+income,topic_67,0.17712633300792294,0.30139270162375825,36,0.6799815565092676,False,67,Jokes & Humor,"Media, Art, and Entertainment",High,0
+income,topic_11,-0.17664544172997887,0.30272820189709476,36,0.6799815565092676,False,11,Fan Crossover Shipping,Creative Writing & Roleplay,High,0
+income,topic_56,-0.17355745517751997,0.3113933539750146,36,0.6799815565092676,False,56,Mental Health Questions,"Health, Biology, and Medicine",High,0
+income,topic_33,-0.17293828792442717,0.3131494010240048,36,0.6799815565092676,False,33,Food & Recipe Help,"Finance, Law, and Practical Life",Medium,0
+income,topic_34,-0.16059243509590762,0.3494579040979712,36,0.737744464206828,False,34,Literary Analysis Help,Education & Homework,High,0
+income,topic_32,-0.14208494208494207,0.4084473082848146,36,0.7853379306626771,False,32,Casual Conversation Opening,Personal Advice & Communication,High,0
+income,topic_47,0.1416385302025682,0.40993651482733634,36,0.7853379306626771,False,47,Computer Tech Support,Coding & Technical Help,Medium,0
+income,topic_10,-0.13789135422007942,0.42255787924996885,36,0.7853379306626771,False,10,Adult Fantasy Fiction,Creative Writing & Roleplay,Medium,1
+income,topic_49,0.13463442706068296,0.43370232338692616,36,0.7853379306626771,False,49,Mixed/Unclear: year/date mix,Information/Trivia & Explanatory QA,Low,1
+income,topic_24,0.12860400388907314,0.4547591355395651,36,0.7853379306626771,False,24,Python Troubleshooting,Coding & Technical Help,High,0
+income,topic_30,-0.12844272844272847,0.4553297144672852,36,0.7853379306626771,False,30,Simple Greeting,Personal Advice & Communication,High,0
+income,topic_7,0.12798893309896592,0.4569372674524957,36,0.7853379306626771,False,7,Fetish Comedy Stories,Creative Writing & Roleplay,High,0
+income,topic_69,0.1262883083412834,0.46298866960503793,36,0.7853379306626771,False,69,Travel Planning Help,"Finance, Law, and Practical Life",High,0
+income,topic_59,0.1257249316772231,0.46500272210290094,36,0.7853379306626771,False,59,Character Fusion Descriptions,"Media, Art, and Entertainment",High,0
+income,topic_46,0.12270613646579027,0.4758736487446809,36,0.7862260283607772,False,46,Brand Name Ideation,Career & Professional Writing,High,0
+income,topic_40,-0.10979390559732634,0.5238342502286035,36,0.8285714018532455,False,40,Poetry Writing Help,Creative Writing & Roleplay,Medium,0
+income,topic_41,0.10910532001879063,0.5264566666747076,36,0.8285714018532455,False,41,Real Estate Writing,Career & Professional Writing,High,0
+income,topic_68,0.10688563651581887,0.5349534888785902,36,0.8285714018532455,False,68,Name & Person Lookup,Information/Trivia & Explanatory QA,Medium,0
+income,topic_3,0.10425381320256037,0.5451127643771352,36,0.8285714018532455,False,3,Political History Questions,"Politics, Religion, and Society",High,0
+income,topic_55,0.09449121357939597,0.5835767428898444,36,0.8494379654630266,False,55,Image Prompt Expansion,"Media, Art, and Entertainment",High,0
+income,topic_61,0.09317120157543428,0.5888686760796836,36,0.8494379654630266,False,61,Short Reply Generation,Personal Advice & Communication,High,0
+income,topic_44,-0.09129279736217942,0.5964354439334753,36,0.8494379654630266,False,44,Cartoon Crossover Concepts,"Media, Art, and Entertainment",High,0
+income,topic_17,0.08886601495372573,0.6062733110360318,36,0.8494379654630266,False,17,Religion & Theology,"Politics, Religion, and Society",High,0
+income,topic_70,0.08679462400849065,0.6147248434271904,36,0.8494379654630266,False,70,Art History Questions,"Media, Art, and Entertainment",High,0
+income,topic_15,0.08359336705716584,0.6278826871501396,36,0.8521265039894752,False,15,Music Theory Help,Education & Homework,Medium,0
+income,topic_8,0.077992277992278,0.6511763708986591,36,0.8682351611982121,False,8,Career Resume Help,Career & Professional Writing,High,0
+income,topic_1,0.06856503213209922,0.6911169767838302,36,0.8773909543944624,False,1,DDLC Fan Fiction,Creative Writing & Roleplay,High,0
+income,topic_73,-0.06764711881252213,0.695052312074439,36,0.8773909543944624,False,73,Warcraft Fan Fiction,Creative Writing & Roleplay,High,0
+income,topic_20,0.06658082513599377,0.6996336594040488,36,0.8773909543944624,False,20,AI Concept Questions,Information/Trivia & Explanatory QA,High,0
+income,topic_31,-0.06435420568059283,0.7092339410234899,36,0.8773909543944624,False,31,ChatGPT/OpenAI Help,Coding & Technical Help,High,0
+income,topic_57,0.06058887979441267,0.7255686042852655,36,0.8773909543944624,False,57,Game Dev Scripting,Coding & Technical Help,High,0
+income,topic_29,0.06018890927052414,0.7273109227217254,36,0.8773909543944624,False,29,Rivalry Fight Fiction,Creative Writing & Roleplay,High,0
+income,topic_12,0.0503898908408747,0.7703977384542644,36,0.914847314414439,False,12,Chemistry Homework Help,Education & Homework,High,0
+income,topic_0,-0.03232453986292928,0.8515420552088587,36,0.99386640120813,False,0,Sports Script Writing,Creative Writing & Roleplay,Medium,0
+income,topic_66,-0.029784178388716276,0.8630945063123234,36,0.99386640120813,False,66,Cast List Generation,"Media, Art, and Entertainment",High,0
+income,topic_28,0.025303761858274706,0.8835363413489993,36,0.9970261825050029,False,28,DC Character Concepts,"Media, Art, and Entertainment",High,0
+income,topic_22,0.022910097222291047,0.894488691088405,36,0.9970261825050029,False,22,Web Development Help,Coding & Technical Help,High,0
+income,topic_45,0.01682219460902718,0.9224263604659424,36,0.9970261825050029,False,45,Mixed/Unclear: animals/images,Information/Trivia & Explanatory QA,Low,1
+income,topic_19,-0.015583750448406972,0.9281219365512985,36,0.9970261825050029,False,19,Biology & Health Questions,"Health, Biology, and Medicine",Medium,1
+income,topic_75,-0.007782547018561982,0.9640690982319151,36,0.9970261825050029,False,75,Wizard101 Fan Fiction,Creative Writing & Roleplay,High,0
+income,topic_65,0.005836264982778541,0.9730509941121177,36,0.9970261825050029,False,65,Time & Space Questions,Information/Trivia & Explanatory QA,Medium,1
+income,topic_18,-0.004509841123056145,0.9791742441263809,36,0.9970261825050029,False,18,Versus Battle Scenarios,"Media, Art, and Entertainment",High,0
+income,topic_14,0.0012873326894239296,0.9940547024215237,36,0.9970261825050029,False,14,Personal Finance Questions,"Finance, Law, and Practical Life",High,0
+income,topic_71,0.0009466631443850904,0.9956280012224358,36,0.9970261825050029,False,71,Konosuba Fan Fiction,Creative Writing & Roleplay,High,0
+income,topic_21,0.0006439151367117386,0.9970261825050029,36,0.9970261825050029,False,21,Relationship Message Help,Personal Advice & Communication,High,0

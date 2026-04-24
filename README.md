@@ -98,4 +98,56 @@ python src/statistics/run_part_c.py \
 
 ---
 
-## Section 4: Qualitative Analysis
+## Section 4: Analysis
+
+- **`src/analyisis/labeled_topics.ipynb`** — Summarizes BERTopic output: topic labeling, cross-state heterogeneity test (binomial null model), label merging, and weighted prevalence at the topic and super-topic level.
+- **`src/analyisis/topic_demographic_relationship.ipynb`** — Computes Spearman's ρ between merged topic proportions and state-level income / education, with bootstrap confidence intervals, heatmaps, scatter plots, and log-odds cross-validation.
+- **`src/analyisis/CTM_robustness.ipynb`** — Validates BERTopic findings by comparing merged topic word sets against a CombinedTM (CTM) model using Jaccard similarity, and contrasts model-level coherence and diversity scores.
+- **`src/analyisis/summary.ipynb`** — Executive summary displaying key figures and conclusions from all three analysis notebooks.
+
+---
+# Project Structure
+
+```
+.
+├── data/                                   # Input data (not tracked by git)
+│   ├── Education/                          # ACS education data by state
+│   ├── Income/                             # ACS income data by state
+│   ├── state_covariates.csv                # Merged state-level demographics
+│   ├── state_topic_proportions.parquet     # State × topic proportion matrix
+│   ├── wildchat_bertopic.parquet           # Preprocessed corpus with BERTopic labels
+│   └── wildchat_log_odds.parquet           # Preprocessed corpus for log-odds
+│
+├── src/
+│   ├── preprocess/                         # Preprocessing notebooks
+│   │   ├── preprocessing_for_bertopic.ipynb
+│   │   └── proprocessing_for_log_odds.ipynb
+│   ├── topic_modeling/                     # Topic model training and evaluation
+│   │   ├── bertopic_wildchat.ipynb         # BERTopic parameter sweep and best-run selection
+│   │   ├── ctm_robustness.ipynb            # CTM training and metric computation
+│   │   ├── log_odds_analysis.ipynb         # Log-odds computation per state
+│   │   └── results/                        # Intermediate model outputs (labels, word lists)
+│   ├── statistics/                         # Part C pipeline scripts
+│   │   └── run_part_c.py                   # Entry point for all statistical tests
+│   ├── analyisis/                          # Analysis notebooks (Section 4)
+│   │   ├── labeled_topics.ipynb
+│   │   ├── topic_demographic_relationship.ipynb
+│   │   ├── CTM_robustness.ipynb
+│   │   └── (summary lives at src/summary.ipynb)
+│   └── summary.ipynb                       # Executive summary of all analysis results
+│
+├── results/
+│   ├── statistics/                         # Part C output tables
+│   ├── qualitative/                        # Legacy intermediate tables and figures
+│   └── summary/                            # Final figures and tables used in analysis
+│       ├── labeled_topics/
+│       ├── topic_demographic_relationship/
+│       └── CTM_robustness/
+│
+├── requirements.txt
+└── README.md
+```
+
+---
+
+

@@ -1,0 +1,77 @@
+topic,topic_id,weighted_prevalence,topic_label,super_topic,label_confidence,unsure_flag
+topic_2,2,0.06708107723493105,Translation & Word Meanings,Information/Trivia & Explanatory QA,Medium,1
+topic_0,0,0.06403599536658798,Sports Script Writing,Creative Writing & Roleplay,Medium,0
+topic_3,3,0.051381719327407954,Political History Questions,"Politics, Religion, and Society",High,0
+topic_1,1,0.050587137216426666,DDLC Fan Fiction,Creative Writing & Roleplay,High,0
+topic_4,4,0.04470273650862121,AI Art Prompting,"Media, Art, and Entertainment",High,0
+topic_6,6,0.03607667351591203,Math Problem Solving,Education & Homework,Medium,0
+topic_8,8,0.031222788938159746,Career Resume Help,Career & Professional Writing,High,0
+topic_5,5,0.028528967121526496,Monster-Girl Roleplay,Creative Writing & Roleplay,Medium,1
+topic_7,7,0.024531948773172666,Fetish Comedy Stories,Creative Writing & Roleplay,High,0
+topic_10,10,0.02451644701833455,Adult Fantasy Fiction,Creative Writing & Roleplay,Medium,1
+topic_9,9,0.022386491544952623,Scam-Baiting Emails,"Finance, Law, and Practical Life",High,0
+topic_12,12,0.021280018301900388,Chemistry Homework Help,Education & Homework,High,0
+topic_11,11,0.02081956625587191,Fan Crossover Shipping,Creative Writing & Roleplay,High,0
+topic_16,16,0.01984954079506051,Programming Help,Coding & Technical Help,High,0
+topic_13,13,0.01903464868152967,Social Media Copy,Career & Professional Writing,Medium,0
+topic_14,14,0.018856457276817097,Personal Finance Questions,"Finance, Law, and Practical Life",High,0
+topic_15,15,0.018267415021929512,Music Theory Help,Education & Homework,Medium,0
+topic_20,20,0.01694361458124334,AI Concept Questions,Information/Trivia & Explanatory QA,High,0
+topic_19,19,0.01688331852926455,Biology & Health Questions,"Health, Biology, and Medicine",Medium,1
+topic_18,18,0.01587671182264704,Versus Battle Scenarios,"Media, Art, and Entertainment",High,0
+topic_17,17,0.015829165119698986,Religion & Theology,"Politics, Religion, and Society",High,0
+topic_22,22,0.015730071243502678,Web Development Help,Coding & Technical Help,High,0
+topic_24,24,0.014241610171438098,Python Troubleshooting,Coding & Technical Help,High,0
+topic_21,21,0.014132795877069003,Relationship Message Help,Personal Advice & Communication,High,0
+topic_23,23,0.013610961163548572,Professional Email Writing,Career & Professional Writing,High,0
+topic_25,25,0.01221137349873851,AI Art Prompting,"Media, Art, and Entertainment",High,0
+topic_28,28,0.011840849607017962,DC Character Concepts,"Media, Art, and Entertainment",High,0
+topic_30,30,0.011790120583514575,Simple Greeting,Personal Advice & Communication,High,0
+topic_26,26,0.01175123218223223,Product Listing Copy,Career & Professional Writing,High,0
+topic_31,31,0.011320234345889326,ChatGPT/OpenAI Help,Coding & Technical Help,High,0
+topic_32,32,0.011282539663096136,Casual Conversation Opening,Personal Advice & Communication,High,0
+topic_29,29,0.010949458339607174,Rivalry Fight Fiction,Creative Writing & Roleplay,High,0
+topic_33,33,0.01056709909416806,Food & Recipe Help,"Finance, Law, and Practical Life",Medium,0
+topic_34,34,0.009950841094634516,Literary Analysis Help,Education & Homework,High,0
+topic_35,35,0.00910140807979929,Simple Greeting,Personal Advice & Communication,High,0
+topic_36,36,0.008499342670922139,Mind & Consciousness,Information/Trivia & Explanatory QA,High,0
+topic_37,37,0.008099407433085615,Prompt Jailbreak Attempts,Coding & Technical Help,High,0
+topic_38,38,0.007733013587967839,Essay Writing Help,Education & Homework,High,0
+topic_27,27,0.0074359650596894375,Azur Lane Roleplay,Creative Writing & Roleplay,High,0
+topic_39,39,0.007309485959449808,Song Lyric Writing,Creative Writing & Roleplay,High,0
+topic_41,41,0.007271376916666124,Real Estate Writing,Career & Professional Writing,High,0
+topic_40,40,0.007150410290574898,Poetry Writing Help,Creative Writing & Roleplay,Medium,0
+topic_44,44,0.006918785945768231,Cartoon Crossover Concepts,"Media, Art, and Entertainment",High,0
+topic_46,46,0.006321310249971848,Brand Name Ideation,Career & Professional Writing,High,0
+topic_42,42,0.0062676459661587846,Customer Service Emails,Career & Professional Writing,High,0
+topic_59,59,0.006067469483641883,Character Fusion Descriptions,"Media, Art, and Entertainment",High,0
+topic_47,47,0.006025266675334461,Computer Tech Support,Coding & Technical Help,Medium,0
+topic_48,48,0.005918330099464023,Physics Problem Solving,Education & Homework,High,0
+topic_45,45,0.00586144890008409,Mixed/Unclear: animals/images,Information/Trivia & Explanatory QA,Low,1
+topic_51,51,0.005592956490305308,AI Art Prompting,"Media, Art, and Entertainment",High,0
+topic_50,50,0.005302107120668569,China History/Politics,"Politics, Religion, and Society",High,0
+topic_49,49,0.0052274829132422035,Mixed/Unclear: year/date mix,Information/Trivia & Explanatory QA,Low,1
+topic_53,53,0.005192838047072075,Game Concept Ideation,"Media, Art, and Entertainment",High,0
+topic_56,56,0.0049513743167837,Mental Health Questions,"Health, Biology, and Medicine",High,0
+topic_58,58,0.00474206421019549,Battery/Vehicle Questions,"Finance, Law, and Practical Life",Medium,1
+topic_55,55,0.004615782643011593,Image Prompt Expansion,"Media, Art, and Entertainment",High,0
+topic_64,64,0.0045555818724727646,Image Generation Requests,"Media, Art, and Entertainment",High,0
+topic_60,60,0.004274057578087977,AI Art Prompting,"Media, Art, and Entertainment",High,0
+topic_66,66,0.004225919154298101,Cast List Generation,"Media, Art, and Entertainment",High,0
+topic_67,67,0.0041678412369403235,Jokes & Humor,"Media, Art, and Entertainment",High,0
+topic_54,54,0.004054996715543229,SQL Query Help,Coding & Technical Help,High,0
+topic_62,62,0.004042068139834716,Education Research Writing,Education & Homework,High,0
+topic_43,43,0.003977066199214116,WordGirl Fan Fiction,Creative Writing & Roleplay,High,0
+topic_61,61,0.003918373736856523,Short Reply Generation,Personal Advice & Communication,High,0
+topic_63,63,0.0038652470666430687,SCP Creative Writing,Creative Writing & Roleplay,High,0
+topic_65,65,0.00374029348507179,Time & Space Questions,Information/Trivia & Explanatory QA,Medium,1
+topic_70,70,0.003720433206098989,Art History Questions,"Media, Art, and Entertainment",High,0
+topic_69,69,0.003692662117296066,Travel Planning Help,"Finance, Law, and Practical Life",High,0
+topic_68,68,0.003528048186810157,Name & Person Lookup,Information/Trivia & Explanatory QA,Medium,0
+topic_52,52,0.003343428025183291,Fantasy Crossover Fanfiction,Creative Writing & Roleplay,High,0
+topic_72,72,0.0032331019526919227,AI Art Prompting,"Media, Art, and Entertainment",High,0
+topic_57,57,0.003097462917467991,Game Dev Scripting,Coding & Technical Help,High,0
+topic_74,74,0.002900507867270487,Tattoo SEO Writing,Career & Professional Writing,High,0
+topic_71,71,0.0021926336718440793,Konosuba Fan Fiction,Creative Writing & Roleplay,High,0
+topic_73,73,0.0019679045890787995,Warcraft Fan Fiction,Creative Writing & Roleplay,High,0
+topic_75,75,0.0018254734049853816,Wizard101 Fan Fiction,Creative Writing & Roleplay,High,0

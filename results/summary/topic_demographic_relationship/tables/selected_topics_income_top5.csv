@@ -1,0 +1,6 @@
+covariate,topic,topic_label,spearman_rho,p_value,n_states,fdr_q_value,significant_fdr,super_topic,ci_low,ci_high,ci_sig,abs_rho
+income,SCP Creative Writing,SCP Creative Writing,0.516004525390542,0.0012760935056885284,36,0.09060263890388552,False,Creative Writing & Roleplay,0.0938738738738739,0.6636293436293437,True,0.516004525390542
+income,Image Generation Requests,Image Generation Requests,-0.43018275096378455,0.008825230979747408,36,0.2840007935455234,False,"Media, Art, and Entertainment",-0.710978120978121,-0.07264478764478784,True,0.43018275096378455
+income,AI Art Prompting,AI Art Prompting,0.3998712998979897,0.01567788078828515,36,0.2840007935455234,False,"Media, Art, and Entertainment",0.07587516087516089,0.6460939510939511,True,0.3998712998979897
+income,Tattoo SEO Writing,Tattoo SEO Writing,0.3987478494122898,0.016000044706790048,36,0.2840007935455234,False,Career & Professional Writing,-0.04284427284427284,0.5702123552123552,False,0.3987478494122898
+income,Education Research Writing,Education Research Writing,0.3849072043838902,0.020446556433188674,36,0.29034110135127916,False,Education & Homework,-0.01868725868725868,0.6574324324324324,False,0.3849072043838902

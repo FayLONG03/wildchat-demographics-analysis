@@ -1,0 +1,6 @@
+covariate,topic,topic_label,spearman_rho,p_value,n_states,fdr_q_value,significant_fdr,super_topic,ci_low,ci_high,ci_sig,abs_rho
+education,SCP Creative Writing,SCP Creative Writing,0.5328603693040082,0.0008203563370503137,36,0.04331511699424527,True,Creative Writing & Roleplay,0.11813384813384814,0.6819562419562418,True,0.5328603693040082
+education,Image Generation Requests,Image Generation Requests,-0.5177551087670571,0.0012201441406829653,36,0.04331511699424527,True,"Media, Art, and Entertainment",-0.7714543114543114,-0.1631402831402832,True,0.5177551087670571
+education,Game Concept Ideation,Game Concept Ideation,0.43991920994046946,0.0072573271370438225,36,0.17175674224337045,False,"Media, Art, and Entertainment",0.03391248391248392,0.7312870012870013,True,0.43991920994046946
+education,Social Media Copy,Social Media Copy,0.3712652514807285,0.02579184727476573,36,0.45780528912709173,False,Career & Professional Writing,-0.009272844272844272,0.6695238095238096,False,0.3712652514807285
+education,Education Research Writing,Education Research Writing,0.353907215209371,0.03421093053688065,36,0.4730788685449423,False,Education & Homework,-0.036389961389961395,0.6127992277992277,False,0.353907215209371

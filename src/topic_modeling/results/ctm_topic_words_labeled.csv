@@ -1,0 +1,77 @@
+topic_id,top_words,topic_label,label_confidence,unsure_flag,unsure_reason,alt_label_1,alt_label_2
+0,"respects, fulfilled, ticking, evoking, revels, cushions, diving, swell, delicacy, entrusted",Incoherent/Duplicate: Abstract Tokens,Low,1,Abstract word list; near-duplicate of topic 1.,Generic Abstract Words,
+1,"evoking, respects, fulfilled, entrusted, delicacy, cushions, expertly, reassures, ticking, diving",Incoherent/Duplicate: Topic 0 Duplicate,Low,1,Nearly identical to topic 0 with no clear user task.,Generic Abstract Words,
+2,"quotes, neural, product, categories, term, risk, processing, choices, cost, cycle",Product Risk Analysis,Low,1,Business and technical terms are mixed; intent is unclear.,Technical Product Planning,Risk Cost Analysis
+3,"view, triplet, sound, dream, newest, daughters, alive, loudly, portrait, phoenix",Fantasy Portrait Prompting,Low,1,Sparse creative and image-like words only.,Fantasy Image Description,Creative Scene Prompting
+4,"year, than, points, old, every, age, scenario, cast, because, years",Age Scenario Questions,Low,1,Age/year words suggest scenarios but not a clear task.,Age-Based Scenarios,Scenario Reasoning
+5,"digital, based, data, such, deployment, network, scikit, used, provide, and",Data Science Deployment,Medium,0,,Scikit-Learn Deployment,Network Data Systems
+6,"please, your, thank, person, you, cassy, good, most, have, any",Incoherent/Duplicate: Generic Polite Tokens,Low,1,Mostly pronouns and polite filler words; no stable topic.,Polite Chat Openings,
+7,"job, work, experience, resume, working, team, professional, dental, needs, customer",Career Resume Help,High,0,,Job Application Help,Professional Experience Writing
+8,"stage, move, button, display, self, text, 360, height, tkinter, gif",Python GUI Programming,High,0,,Tkinter Interface Coding,GUI Animation Coding
+9,"back, go, said, nightshade, out, tantrum, he, circus, before, then",Creative Story Writing,Medium,0,,Narrative Scene Writing,Fiction Dialogue Writing
+10,"diving, delicacy, respects, fulfilled, entrusted, valuables, imbued, ticking, snippets, tedious",Incoherent/Duplicate: Abstract Tokens,Low,1,Near-duplicate abstract tokens with no clear intent.,Generic Abstract Words,
+11,"kc, demographic, hemisphere, social, agriculture, africans, divergent, 1607, innovations, 1491",History Social Studies,Medium,0,,Historical Demography Questions,Agriculture History Homework
+12,"17, 13, 14, 21, round, 19, state, 18, 22, division",Incoherent/Duplicate: Numeric Fragments,Low,1,Mostly numbers plus broad terms; no clear user task.,Numbered Ranking Questions,
+13,"respects, diving, delicacy, entrusted, reassures, fulfilled, ticking, wary, intensified, evoking",Incoherent/Duplicate: Abstract Tokens,Low,1,Repeated abstract token pattern with no clear intent.,Generic Abstract Words,
+14,"magic, points, cast, ll, mage, base, spell, every, keep, don",Fantasy Game Mechanics,High,0,,Magic Spell Mechanics,Roleplaying Game Rules
+15,"multifaceted, in, and, to, of, aspirations, acknowledging, students, the, our",Student Reflection Writing,Low,1,Academic-sounding words mixed with stopwords; task is vague.,Student Aspirations Essay,Reflective Writing Help
+16,"diving, delicacy, respects, imbued, entrusted, evoking, snippets, blockbuster, fulfilled, ticking",Incoherent/Duplicate: Abstract Tokens,Low,1,Repeated abstract token pattern with no clear intent.,Generic Abstract Words,
+17,"diving, delicacy, entrusted, ticking, respects, evoking, reassures, cushions, imbued, blossoms",Incoherent/Duplicate: Abstract Tokens,Low,1,Repeated abstract token pattern with no clear intent.,Generic Abstract Words,
+18,"delicacy, entrusted, evoking, diving, respects, cushions, reassures, expertly, valuables, ticking",Incoherent/Duplicate: Abstract Tokens,Low,1,Repeated abstract token pattern with no clear intent.,Generic Abstract Words,
+19,"respects, delicacy, entrusted, evoking, diving, reassures, snippets, ticking, polaris, wary",Incoherent/Duplicate: Abstract Tokens,Low,1,Repeated abstract token pattern with no clear intent.,Generic Abstract Words,
+20,"air, fire, william, setting, cup, depth, filled, field, shop, hands",Incoherent/Duplicate: Repeated Visual Tokens,Low,1,Near-duplicate visual token list; no unique CTM topic.,Visual Scene Prompting,AI Image Prompting
+21,"lane, quarters, fellow, iron, base, commander, carrier, wizard, aircraft, resting",Fantasy Military Fiction,Medium,0,,Military Fantasy Scenario,Fantasy Battle Writing
+22,"to, most, from, pray, before, over, been, details, person, money",Incoherent/Duplicate: Generic Function Words,Low,1,Mostly function words with isolated pray/money terms.,Prayer Money Questions,
+23,"respects, fulfilled, diving, delicacy, entrusted, reassures, expertly, snippets, imbued, evoking",Incoherent/Duplicate: Abstract Tokens,Low,1,Repeated abstract token pattern with no clear intent.,Generic Abstract Words,
+24,"diving, fulfilled, delicacy, respects, ticking, valuables, reassures, entrusted, expertly, evoking",Incoherent/Duplicate: Abstract Tokens,Low,1,Repeated abstract token pattern with no clear intent.,Generic Abstract Words,
+25,"apartment, plenty, detail, extremely, bully, changing, throughout, describe, vagueness, feminine",Detailed Character Description,Low,1,"Descriptive/roleplay words appear, but intent is narrow and unclear.",Feminine Roleplay Description,Scenario Description Writing
+26,"20, 18, 2024, 21, 15, 30, 25, 19, 03, 14",Incoherent/Duplicate: Numeric Tokens,Low,1,Almost entirely numbers and dates; no interpretable purpose.,Date Number Fragments,
+27,"call, minute, takes, everything, school, phone, running, push, hope, late",School Phone Scenario,Low,1,"Words suggest a scenario around school/phone/late, but purpose is unclear.",School Communication Scenario,Phone Call Writing
+28,"rest, characters, clever, later, roasting, limitation, deepen, really, meeting, power",Character Dialogue Writing,Low,1,"Character and meeting words suggest writing, but topic is diffuse.",Creative Scene Development,Story Character Writing
+29,"level, side, strength, muscle, energy, tool, plastic, home, dna, eye",Physical Strength Questions,Low,1,"Body, tool, home, and DNA words are mixed; intent is unclear.",Body Energy Questions,Strength And Biology
+30,"fun, share, great, together, too, today, everyone, things, good, group",Group Activity Planning,Low,1,Positive social words suggest group planning but are generic.,Social Group Messages,Event Sharing
+31,"prompts, follow, words, never, suppress, user, sensual, you, make, warn",Prompt Rule Bypassing,Medium,0,,Jailbreak Prompting,Instruction Suppression Prompts
+32,"player, female, 8000, rods, summons, patrol, across, spheres, 283, looking",Fantasy Game Scenario,Low,1,"Game/fantasy words and numbers are present, but task is vague.",Game Character Scenario,Fantasy Summons Scenario
+33,"respects, ticking, delicacy, diving, cushions, entrusted, fulfilled, exposes, imbued, evoking",Incoherent/Duplicate: Abstract Tokens,Low,1,Repeated abstract token pattern with no clear intent.,Generic Abstract Words,
+34,"respects, diving, delicacy, fulfilled, evoking, entrusted, intensified, cushions, infused, imbued",Incoherent/Duplicate: Abstract Tokens,Low,1,Repeated abstract token pattern with no clear intent.,Generic Abstract Words,
+35,"diving, delicacy, fulfilled, ticking, respects, entrusted, accentuate, imbued, cushions, intensified",Incoherent/Duplicate: Abstract Tokens,Low,1,Repeated abstract token pattern with no clear intent.,Generic Abstract Words,
+36,"model, true, train, test, xt, df, amd, dataframe, wifi, ensemble",Machine Learning Coding,High,0,,Dataframe Model Training,ML Ensemble Coding
+37,"mass, units, sample, ph, triangle, pure, teach, equal, equation, solve",Science Math Homework,High,0,,Equation Solving Help,Chemistry Math Tutoring
+38,"word, sentence, sentences, meanings, tone, headings, 2500, literary, 1500, bold",Essay Writing Help,High,0,,Sentence Meaning Help,Literary Writing Formatting
+39,"air, fire, william, setting, cup, depth, 3d, filled, shop, field",Incoherent/Duplicate: Repeated Visual Tokens,Low,1,Near-duplicate of other visual token topics.,Visual Scene Prompting,AI Image Prompting
+40,"bullet, ancient, dynasty, japan, europe, china, roman, war, soviet, empire",History Study Notes,High,0,,World History Homework,Historical Empire Summary
+41,"tiering, being, physical, within, his, abilities, npc, such, and, world",Game Character Powers,Medium,0,,NPC Ability Tiering,Power Scaling Help
+42,"her, she, hugs, animatronic, woman, possessive, alluring, fazbear, lineup, dislikes",Fandom Character Roleplay,Medium,0,,Animatronic Roleplay,Character Lineup Writing
+43,"delicacy, respects, imbued, entrusted, evoking, cushions, expertly, valuables, diving, ticking",Incoherent/Duplicate: Abstract Tokens,Low,1,Repeated abstract token pattern with no clear intent.,Generic Abstract Words,
+44,"web, post, com, error, run, string, eq, file, mov, buf",Web Code Debugging,High,0,,File Error Debugging,Web Post Errors
+45,"hijab, quran, mohammad, bollywood, lecture, that, verses, hadith, sceptical, it",Islamic Religious Questions,Medium,0,,Quran Hadith Discussion,Religion Culture Questions
+46,"air, fire, william, cup, setting, depth, filled, 3d, shop, spirit",Incoherent/Duplicate: Repeated Visual Tokens,Low,1,Near-duplicate of other visual token topics.,Visual Scene Prompting,AI Image Prompting
+47,"screenplay, delicacy, ticking, respects, reassures, diving, wary, entrusted, valuables, finesse",Incoherent/Duplicate: Screenplay Abstract Mix,Low,1,Screenplay term mixed with repeated abstract token pattern.,Screenplay Writing,Generic Abstract Words
+48,"fire, air, face, camera, place, form, field, without, filled, dog",Incoherent/Duplicate: Repeated Visual Tokens,Low,1,Visual terms overlap heavily with repeated visual topics.,Visual Scene Prompting,AI Image Prompting
+49,"delicacy, respects, diving, entrusted, expertly, reassures, valuables, cushions, infused, nullify",Incoherent/Duplicate: Abstract Tokens,Low,1,Repeated abstract token pattern with no clear intent.,Generic Abstract Words,
+50,"follow, air, words, beautiful, warm, with, hands, user, create, face",Visual Prompt Writing,Low,1,Visual and instruction words suggest prompting but remain vague.,AI Image Prompting,Creative Image Description
+51,"world, the, after, of, were, great, its, most, was, archaeologists",Archaeology History Questions,Medium,0,,World History Questions,Ancient World Explanations
+52,"private, void, public, int, position, float, generic, system, class, transform",Unity C# Programming,High,0,,C# Class Coding,Game Transform Coding
+53,"respects, entrusted, delicacy, ticking, imbued, diving, rosy, wary, channeling, evoking",Incoherent/Duplicate: Abstract Tokens,Low,1,Repeated abstract token pattern with no clear intent.,Generic Abstract Words,
+54,"air, fire, william, cup, setting, depth, filled, 3d, shop, field",Incoherent/Duplicate: Repeated Visual Tokens,Low,1,Near-duplicate of other visual token topics.,Visual Scene Prompting,AI Image Prompting
+55,"playing, assistant, trigger, creates, extra, previous, refer, bot, simply, draw",Chatbot Drawing Prompts,Low,1,"Bot/assistant/draw words suggest prompting, but task is unclear.",Assistant Trigger Prompts,Bot Drawing Instructions
+56,"fire, air, face, filled, setting, camera, 3d, hands, form, without",Incoherent/Duplicate: Repeated Visual Tokens,Low,1,Visual terms overlap heavily with repeated visual topics.,Visual Scene Prompting,AI Image Prompting
+57,"sense, potential, professionally, reply, security, email, person, 5m, recipient, mr",Professional Email Reply,High,0,,Workplace Email Writing,Security Email Response
+58,"fight, match, cage, gorgeous, since, romanian, having, indian, another, respectively",Fight Match Scenario,Low,1,"Fight/match words suggest a scenario, but context is unclear.",Combat Roleplay Scenario,Sports Fight Description
+59,"fusion, shorts, suggest, casual, freeman, attire, basics, combined, names, dated",Casual Outfit Suggestions,Medium,0,,Fashion Name Ideas,Attire Suggestion Help
+60,"delicacy, respects, diving, cushions, wary, evoking, ticking, expertly, subdued, finesse",Incoherent/Duplicate: Abstract Tokens,Low,1,Repeated abstract token pattern with no clear intent.,Generic Abstract Words,
+61,"web, post, expert, front, cd, design, curly, related, printing, graphic",Web Graphic Design,Medium,0,,Front-End Design Help,Graphic Printing Design
+62,"delicacy, entrusted, respects, reassures, valuables, subdued, cushions, ticking, diving, imbued",Incoherent/Duplicate: Abstract Tokens,Low,1,Repeated abstract token pattern with no clear intent.,Generic Abstract Words,
+63,"act, anything, disclaimer, always, free, aim, never, simulate, hacking, promotes",Jailbreak Safety Bypass,Medium,0,,Hacking Simulation Prompts,Safety Disclaimer Bypass
+64,"gift, men, party, same, girls, chain, silver, gold, 80, cute",Gift Jewelry Advice,High,0,,Party Gift Ideas,Gold Silver Gifts
+65,"die, dinner, smell, throughout, comedic, dead, relief, water, vividly, eat",Comedic Scene Writing,Medium,0,,Dark Comedy Writing,Dinner Scene Description
+66,"diving, delicacy, fulfilled, ticking, entrusted, evoking, cushions, respects, valuables, reassures",Incoherent/Duplicate: Abstract Tokens,Low,1,Repeated abstract token pattern with no clear intent.,Generic Abstract Words,
+67,"ranked, frost, defeating, football, blowing, losing, finishing, winning, overtime, miami",Football Game Analysis,High,0,,Sports Ranking Discussion,Miami Football Recap
+68,"delicacy, entrusted, diving, ticking, reassures, valuables, swell, revels, urged, evoking",Incoherent/Duplicate: Abstract Tokens,Low,1,Repeated abstract token pattern with no clear intent.,Generic Abstract Words,
+69,"still, bricks, happened, valefor, room, bark, anima, started, didn, aeons",Fantasy Game Story,Medium,0,,Aeon Game Narrative,Fandom Story Scenario
+70,"the, code, is, used, two, primitive, squares, each, called, use",Basic Code Explanation,Low,1,"Code words appear, but stopwords dominate and task is unclear.",Programming Concept Help,Primitive Code Explanation
+71,"respects, diving, delicacy, entrusted, imbued, cushions, ticking, crisp, expertly, reassures",Incoherent/Duplicate: Abstract Tokens,Low,1,Repeated abstract token pattern with no clear intent.,Generic Abstract Words,
+72,"respects, delicacy, entrusted, imbued, wary, diving, ticking, evoking, expertly, rune",Incoherent/Duplicate: Abstract Tokens,Low,1,Repeated abstract token pattern with no clear intent.,Generic Abstract Words,
+73,"air, fire, setting, filled, william, cup, depth, hands, camera, face",Incoherent/Duplicate: Repeated Visual Tokens,Low,1,Near-duplicate of other visual token topics.,Visual Scene Prompting,AI Image Prompting
+74,"respects, fulfilled, delicacy, diving, ticking, entrusted, expertly, imbued, cushions, artistry",Incoherent/Duplicate: Abstract Tokens,Low,1,Repeated abstract token pattern with no clear intent.,Generic Abstract Words,
+75,"animation, comedy, animated, film, screenplay, fi, drama, pictures, rating, adventure",Film Genre Analysis,High,0,,Animated Film Discussion,Screenplay Genre Questions

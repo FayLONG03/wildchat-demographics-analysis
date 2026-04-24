@@ -1,0 +1,7 @@
+covariate,topic,topic_label,spearman_rho,p_value,n_states,fdr_q_value,significant_fdr,super_topic,ci_low,ci_high,ci_sig
+education,SCP Creative Writing,SCP Creative Writing,0.5328603693040082,0.0008203563370503137,36,0.04331511699424527,True,Creative Writing & Roleplay,0.11813384813384814,0.6819562419562418,True
+education,Image Generation Requests,Image Generation Requests,-0.5177551087670571,0.0012201441406829653,36,0.04331511699424527,True,"Media, Art, and Entertainment",-0.7714543114543114,-0.1631402831402832,True
+education,Game Concept Ideation,Game Concept Ideation,0.43991920994046946,0.0072573271370438225,36,0.17175674224337045,False,"Media, Art, and Entertainment",0.03391248391248392,0.7312870012870013,True
+income,SCP Creative Writing,SCP Creative Writing,0.516004525390542,0.0012760935056885284,36,0.09060263890388552,False,Creative Writing & Roleplay,0.0938738738738739,0.6636293436293437,True
+income,Image Generation Requests,Image Generation Requests,-0.43018275096378455,0.008825230979747408,36,0.2840007935455234,False,"Media, Art, and Entertainment",-0.710978120978121,-0.07264478764478784,True
+income,AI Art Prompting,AI Art Prompting,0.3998712998979897,0.01567788078828515,36,0.2840007935455234,False,"Media, Art, and Entertainment",0.07587516087516089,0.6460939510939511,True
