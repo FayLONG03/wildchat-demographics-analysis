@@ -58,6 +58,15 @@ def parse_args() -> argparse.Namespace:
         default=3,
         help="Minimum token length for log-odds tokenization.",
     )
+    parser.add_argument(
+        "--log-odds-state-whitelist",
+        type=Path,
+        default=Path("data/state_topic_proportions.parquet"),
+        help=(
+            "Parquet with a 'state' column used to restrict log-odds to the same "
+            "state set as topic-level analyses."
+        ),
+    )
     parser.add_argument("--top-k", type=int, default=50, help="Top/bottom words to export.")
     parser.add_argument(
         "--top-k-per-topic",
@@ -90,5 +99,6 @@ if __name__ == "__main__":
         top_k=args.top_k,
         min_docs_per_state=args.min_docs_per_state,
         min_token_length=args.min_token_length,
+        state_whitelist_path=args.log_odds_state_whitelist,
     )
     print(f"Completed Part C analysis. Outputs are in: {args.output_dir}")

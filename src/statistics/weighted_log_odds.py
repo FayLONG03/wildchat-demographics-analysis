@@ -95,6 +95,7 @@ def run_log_odds(
     top_k: int = 50,
     min_docs_per_state: int = 100,
     min_token_length: int = 3,
+    state_whitelist_path: Path | None = None,
 ) -> None:
     ensure_output_dir(output_dir)
 
@@ -109,8 +110,30 @@ def run_log_odds(
             f"No states have at least {min_docs_per_state} documents in {log_odds_input_path}."
         )
 
+    if state_whitelist_path is not None:
+        whitelist_df = pd.read_parquet(state_whitelist_path)
+        if "state" not in whitelist_df.columns:
+            raise ValueError(f"'state' column not found in {state_whitelist_path}")
+        whitelist_states = set(whitelist_df["state"].astype(str).str.strip())
+        valid_states = sorted(set(valid_states).intersection(whitelist_states))
+        if not valid_states:
+            raise ValueError(
+                "No valid states remain after applying state whitelist. "
+                "Please check the whitelist file and state names."
+            )
+
     filtered = text_df[text_df["state"].isin(valid_states)].copy()
     prior_counts = count_tokens(filtered["user_text"], stopwords=STOPWORDS, min_token_length=min_token_length)
+
+    # Remove stale per-state files from previous runs (e.g., when state set changes).
+    valid_slug_set = {state.replace(" ", "_") for state in valid_states}
+    for existing_file in output_dir.glob("log_odds_*_vs_rest.csv"):
+        name = existing_file.name
+        if name in {"log_odds_state_vs_rest_top_50.csv", "log_odds_state_vs_rest_bottom_50.csv"}:
+            continue
+        state_slug = name[len("log_odds_") : -len("_vs_rest.csv")]
+        if state_slug not in valid_slug_set:
+            existing_file.unlink(missing_ok=True)
 
     top_rows = []
     bottom_rows = []
@@ -194,6 +217,15 @@ def parse_args() -> argparse.Namespace:
         default=3,
         help="Minimum token length after regex tokenization.",
     )
+    parser.add_argument(
+        "--state-whitelist",
+        type=Path,
+        default=None,
+        help=(
+            "Optional parquet file with a 'state' column used to restrict log-odds "
+            "to a specific state set."
+        ),
+    )
     return parser.parse_args()
 
 
@@ -206,5 +238,6 @@ if __name__ == "__main__":
         top_k=args.top_k,
         min_docs_per_state=args.min_docs_per_state,
         min_token_length=args.min_token_length,
+        state_whitelist_path=args.state_whitelist,
     )
     print(f"Saved weighted log-odds results to {args.output_dir}")

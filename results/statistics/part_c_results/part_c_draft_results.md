@@ -31,7 +31,7 @@ This ranking output gives direct evidence for “where” particular usage patte
 
 ## 3) Weighted log-odds (state vs. rest)
 
-We ran weighted log-odds on cleaned user text (`wildchat_log_odds.parquet`) for each state against all remaining states, using an informative prior and minimum token-frequency threshold. Tokenization used lowercase regex filtering with stopword removal and minimum token length constraints to improve interpretability. States with at least 100 prompts were included (39 states; state prompt counts ranged from 103 to 11,254).
+We ran weighted log-odds on cleaned user text (`wildchat_log_odds.parquet`) for each state against all remaining states, using an informative prior and minimum token-frequency threshold. Tokenization used lowercase regex filtering with stopword removal and minimum token length constraints to improve interpretability. To keep analyses consistent across Part C, we restricted log-odds to the same state set used by topic-level analysis (`state_topic_proportions.parquet`), resulting in 36 states.
 
 Illustrative lexical over-indexing:
 
