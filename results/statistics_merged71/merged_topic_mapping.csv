@@ -1,0 +1,72 @@
+merged_topic_id,topic_label,super_topic,constituent_topics,n_constituent_topics
+topic_merged_0,AI Art Prompting,"Media, Art, and Entertainment",topic_25|topic_4|topic_51|topic_60|topic_72,5
+topic_merged_1,AI Concept Questions,Information/Trivia & Explanatory QA,topic_20,1
+topic_merged_2,Adult Fantasy Fiction,Creative Writing & Roleplay,topic_10,1
+topic_merged_3,Art History Questions,"Media, Art, and Entertainment",topic_70,1
+topic_merged_4,Azur Lane Roleplay,Creative Writing & Roleplay,topic_27,1
+topic_merged_5,Battery/Vehicle Questions,"Finance, Law, and Practical Life",topic_58,1
+topic_merged_6,Biology & Health Questions,"Health, Biology, and Medicine",topic_19,1
+topic_merged_7,Brand Name Ideation,Career & Professional Writing,topic_46,1
+topic_merged_8,Career Resume Help,Career & Professional Writing,topic_8,1
+topic_merged_9,Cartoon Crossover Concepts,"Media, Art, and Entertainment",topic_44,1
+topic_merged_10,Cast List Generation,"Media, Art, and Entertainment",topic_66,1
+topic_merged_11,Casual Conversation Opening,Personal Advice & Communication,topic_32,1
+topic_merged_12,Character Fusion Descriptions,"Media, Art, and Entertainment",topic_59,1
+topic_merged_13,ChatGPT/OpenAI Help,Coding & Technical Help,topic_31,1
+topic_merged_14,Chemistry Homework Help,Education & Homework,topic_12,1
+topic_merged_15,China History/Politics,"Politics, Religion, and Society",topic_50,1
+topic_merged_16,Computer Tech Support,Coding & Technical Help,topic_47,1
+topic_merged_17,Customer Service Emails,Career & Professional Writing,topic_42,1
+topic_merged_18,DC Character Concepts,"Media, Art, and Entertainment",topic_28,1
+topic_merged_19,DDLC Fan Fiction,Creative Writing & Roleplay,topic_1,1
+topic_merged_20,Education Research Writing,Education & Homework,topic_62,1
+topic_merged_21,Essay Writing Help,Education & Homework,topic_38,1
+topic_merged_22,Fan Crossover Shipping,Creative Writing & Roleplay,topic_11,1
+topic_merged_23,Fantasy Crossover Fanfiction,Creative Writing & Roleplay,topic_52,1
+topic_merged_24,Fetish Comedy Stories,Creative Writing & Roleplay,topic_7,1
+topic_merged_25,Food & Recipe Help,"Finance, Law, and Practical Life",topic_33,1
+topic_merged_26,Game Concept Ideation,"Media, Art, and Entertainment",topic_53,1
+topic_merged_27,Game Dev Scripting,Coding & Technical Help,topic_57,1
+topic_merged_28,Image Generation Requests,"Media, Art, and Entertainment",topic_64,1
+topic_merged_29,Image Prompt Expansion,"Media, Art, and Entertainment",topic_55,1
+topic_merged_30,Jokes & Humor,"Media, Art, and Entertainment",topic_67,1
+topic_merged_31,Konosuba Fan Fiction,Creative Writing & Roleplay,topic_71,1
+topic_merged_32,Literary Analysis Help,Education & Homework,topic_34,1
+topic_merged_33,Math Problem Solving,Education & Homework,topic_6,1
+topic_merged_34,Mental Health Questions,"Health, Biology, and Medicine",topic_56,1
+topic_merged_35,Mind & Consciousness,Information/Trivia & Explanatory QA,topic_36,1
+topic_merged_36,Mixed/Unclear: animals/images,Information/Trivia & Explanatory QA,topic_45,1
+topic_merged_37,Mixed/Unclear: year/date mix,Information/Trivia & Explanatory QA,topic_49,1
+topic_merged_38,Monster-Girl Roleplay,Creative Writing & Roleplay,topic_5,1
+topic_merged_39,Music Theory Help,Education & Homework,topic_15,1
+topic_merged_40,Name & Person Lookup,Information/Trivia & Explanatory QA,topic_68,1
+topic_merged_41,Personal Finance Questions,"Finance, Law, and Practical Life",topic_14,1
+topic_merged_42,Physics Problem Solving,Education & Homework,topic_48,1
+topic_merged_43,Poetry Writing Help,Creative Writing & Roleplay,topic_40,1
+topic_merged_44,Political History Questions,"Politics, Religion, and Society",topic_3,1
+topic_merged_45,Product Listing Copy,Career & Professional Writing,topic_26,1
+topic_merged_46,Professional Email Writing,Career & Professional Writing,topic_23,1
+topic_merged_47,Programming Help,Coding & Technical Help,topic_16,1
+topic_merged_48,Prompt Jailbreak Attempts,Coding & Technical Help,topic_37,1
+topic_merged_49,Python Troubleshooting,Coding & Technical Help,topic_24,1
+topic_merged_50,Real Estate Writing,Career & Professional Writing,topic_41,1
+topic_merged_51,Relationship Message Help,Personal Advice & Communication,topic_21,1
+topic_merged_52,Religion & Theology,"Politics, Religion, and Society",topic_17,1
+topic_merged_53,Rivalry Fight Fiction,Creative Writing & Roleplay,topic_29,1
+topic_merged_54,SCP Creative Writing,Creative Writing & Roleplay,topic_63,1
+topic_merged_55,SQL Query Help,Coding & Technical Help,topic_54,1
+topic_merged_56,Scam-Baiting Emails,"Finance, Law, and Practical Life",topic_9,1
+topic_merged_57,Short Reply Generation,Personal Advice & Communication,topic_61,1
+topic_merged_58,Simple Greeting,Personal Advice & Communication,topic_30|topic_35,2
+topic_merged_59,Social Media Copy,Career & Professional Writing,topic_13,1
+topic_merged_60,Song Lyric Writing,Creative Writing & Roleplay,topic_39,1
+topic_merged_61,Sports Script Writing,Creative Writing & Roleplay,topic_0,1
+topic_merged_62,Tattoo SEO Writing,Career & Professional Writing,topic_74,1
+topic_merged_63,Time & Space Questions,Information/Trivia & Explanatory QA,topic_65,1
+topic_merged_64,Translation & Word Meanings,Information/Trivia & Explanatory QA,topic_2,1
+topic_merged_65,Travel Planning Help,"Finance, Law, and Practical Life",topic_69,1
+topic_merged_66,Versus Battle Scenarios,"Media, Art, and Entertainment",topic_18,1
+topic_merged_67,Warcraft Fan Fiction,Creative Writing & Roleplay,topic_73,1
+topic_merged_68,Web Development Help,Coding & Technical Help,topic_22,1
+topic_merged_69,Wizard101 Fan Fiction,Creative Writing & Roleplay,topic_75,1
+topic_merged_70,WordGirl Fan Fiction,Creative Writing & Roleplay,topic_43,1

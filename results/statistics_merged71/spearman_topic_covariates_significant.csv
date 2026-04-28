@@ -1,0 +1,3 @@
+covariate,topic,spearman_rho,p_value,n_states,fdr_q_value,significant_fdr
+education,topic_merged_54,0.5328603693040082,0.0008203563370503137,36,0.04331511699424527,True
+education,topic_merged_28,-0.5177551087670571,0.0012201441406829653,36,0.04331511699424527,True

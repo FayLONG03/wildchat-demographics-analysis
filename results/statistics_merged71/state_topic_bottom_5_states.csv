@@ -1,0 +1,356 @@
+state,topic,topic_proportion,topic_zscore,rank_within_topic_desc
+Indiana,topic_merged_0,0.0,-0.6744143757222093,33.0
+Kentucky,topic_merged_0,0.0,-0.6744143757222093,33.0
+Nebraska,topic_merged_0,0.0,-0.6744143757222093,33.0
+Tennessee,topic_merged_0,0.0,-0.6744143757222093,33.0
+Michigan,topic_merged_0,0.00018281535648994517,-0.6723257462337738,32.0
+Alabama,topic_merged_1,0.0,-0.41711729234255096,33.0
+Kansas,topic_merged_1,0.0,-0.41711729234255096,33.0
+Kentucky,topic_merged_1,0.0,-0.41711729234255096,33.0
+Louisiana,topic_merged_1,0.0,-0.41711729234255096,33.0
+Michigan,topic_merged_1,0.00036563071297989033,-0.41034612134731796,32.0
+Alabama,topic_merged_10,0.0,-0.19990898880392785,10.0
+Arkansas,topic_merged_10,0.0,-0.19990898880392785,10.0
+Colorado,topic_merged_10,0.0,-0.19990898880392785,10.0
+District of Columbia,topic_merged_10,0.0,-0.19990898880392785,10.0
+Illinois,topic_merged_10,0.0,-0.19990898880392785,10.0
+South Carolina,topic_merged_11,0.0,-1.056311219033899,36.0
+Michigan,topic_merged_11,0.0010968921389396709,-1.0090249548289505,35.0
+Connecticut,topic_merged_11,0.001969796454366382,-0.9713946513382101,34.0
+Pennsylvania,topic_merged_11,0.004627487274409995,-0.8568234315889904,33.0
+Georgia,topic_merged_11,0.005491153142159854,-0.8195913912110784,32.0
+Alabama,topic_merged_12,0.0,-0.21281468380179244,9.0
+Arizona,topic_merged_12,0.0,-0.21281468380179244,9.0
+Arkansas,topic_merged_12,0.0,-0.21281468380179244,9.0
+Colorado,topic_merged_12,0.0,-0.21281468380179244,9.0
+District of Columbia,topic_merged_12,0.0,-0.21281468380179244,9.0
+Nebraska,topic_merged_13,0.0,-1.4421528700295259,36.0
+Michigan,topic_merged_13,0.0009140767824497258,-1.3657975961902844,35.0
+Connecticut,topic_merged_13,0.0026263952724885093,-1.2227630615459273,34.0
+Ohio,topic_merged_13,0.0033259423503325942,-1.1643280266366318,33.0
+Pennsylvania,topic_merged_13,0.0041647385469689956,-1.0942611410979335,32.0
+Alabama,topic_merged_14,0.0,-0.8596480233869668,32.0
+Kansas,topic_merged_14,0.0,-0.8596480233869668,32.0
+Kentucky,topic_merged_14,0.0,-0.8596480233869668,32.0
+Louisiana,topic_merged_14,0.0,-0.8596480233869668,32.0
+Utah,topic_merged_14,0.0,-0.8596480233869668,32.0
+Alabama,topic_merged_15,0.0,-0.4654996583576868,19.0
+Arizona,topic_merged_15,0.0,-0.4654996583576868,19.0
+Arkansas,topic_merged_15,0.0,-0.4654996583576868,19.0
+Colorado,topic_merged_15,0.0,-0.4654996583576868,19.0
+District of Columbia,topic_merged_15,0.0,-0.4654996583576868,19.0
+Alabama,topic_merged_16,0.0,-0.4013166502176183,28.0
+District of Columbia,topic_merged_16,0.0,-0.4013166502176183,28.0
+Iowa,topic_merged_16,0.0,-0.4013166502176183,28.0
+Kentucky,topic_merged_16,0.0,-0.4013166502176183,28.0
+Louisiana,topic_merged_16,0.0,-0.4013166502176183,28.0
+Arkansas,topic_merged_17,0.0,-0.431802350333549,21.0
+Colorado,topic_merged_17,0.0,-0.431802350333549,21.0
+District of Columbia,topic_merged_17,0.0,-0.431802350333549,21.0
+Indiana,topic_merged_17,0.0,-0.431802350333549,21.0
+Iowa,topic_merged_17,0.0,-0.431802350333549,21.0
+Alabama,topic_merged_18,0.0,-0.4788576819908843,20.0
+Arkansas,topic_merged_18,0.0,-0.4788576819908843,20.0
+Colorado,topic_merged_18,0.0,-0.4788576819908843,20.0
+District of Columbia,topic_merged_18,0.0,-0.4788576819908843,20.0
+Illinois,topic_merged_18,0.0,-0.4788576819908843,20.0
+Alabama,topic_merged_19,0.0,-0.19532134778219584,20.0
+Arizona,topic_merged_19,0.0,-0.19532134778219584,20.0
+Arkansas,topic_merged_19,0.0,-0.19532134778219584,20.0
+Colorado,topic_merged_19,0.0,-0.19532134778219584,20.0
+District of Columbia,topic_merged_19,0.0,-0.19532134778219584,20.0
+Alabama,topic_merged_2,0.0,-0.5768724582491964,31.0
+Iowa,topic_merged_2,0.0,-0.5768724582491964,31.0
+Kansas,topic_merged_2,0.0,-0.5768724582491964,31.0
+Kentucky,topic_merged_2,0.0,-0.5768724582491964,31.0
+Nebraska,topic_merged_2,0.0,-0.5768724582491964,31.0
+Alabama,topic_merged_20,0.0,-0.4138417276604569,16.0
+Colorado,topic_merged_20,0.0,-0.4138417276604569,16.0
+Connecticut,topic_merged_20,0.0,-0.4138417276604569,16.0
+Georgia,topic_merged_20,0.0,-0.4138417276604569,16.0
+Indiana,topic_merged_20,0.0,-0.4138417276604569,16.0
+District of Columbia,topic_merged_21,0.0,-1.052170050129129,32.0
+Iowa,topic_merged_21,0.0,-1.052170050129129,32.0
+Kentucky,topic_merged_21,0.0,-1.052170050129129,32.0
+Louisiana,topic_merged_21,0.0,-1.052170050129129,32.0
+Minnesota,topic_merged_21,0.0,-1.052170050129129,32.0
+Connecticut,topic_merged_22,0.0,-0.25813527393278957,24.0
+District of Columbia,topic_merged_22,0.0,-0.25813527393278957,24.0
+Iowa,topic_merged_22,0.0,-0.25813527393278957,24.0
+Kansas,topic_merged_22,0.0,-0.25813527393278957,24.0
+Kentucky,topic_merged_22,0.0,-0.25813527393278957,24.0
+Alabama,topic_merged_23,0.0,-0.24706214537114288,4.0
+Arizona,topic_merged_23,0.0,-0.24706214537114288,4.0
+Arkansas,topic_merged_23,0.0,-0.24706214537114288,4.0
+California,topic_merged_23,0.0,-0.24706214537114288,4.0
+Colorado,topic_merged_23,0.0,-0.24706214537114288,4.0
+Arkansas,topic_merged_24,0.0,-0.19769462867082943,25.0
+Colorado,topic_merged_24,0.0,-0.19769462867082943,25.0
+District of Columbia,topic_merged_24,0.0,-0.19769462867082943,25.0
+Indiana,topic_merged_24,0.0,-0.19769462867082943,25.0
+Iowa,topic_merged_24,0.0,-0.19769462867082943,25.0
+Alabama,topic_merged_25,0.0,-1.150351990920126,32.0
+Arkansas,topic_merged_25,0.0,-1.150351990920126,32.0
+Colorado,topic_merged_25,0.0,-1.150351990920126,32.0
+Indiana,topic_merged_25,0.0,-1.150351990920126,32.0
+Minnesota,topic_merged_25,0.0,-1.150351990920126,32.0
+Alabama,topic_merged_26,0.0,-0.6007392765899422,26.0
+Arkansas,topic_merged_26,0.0,-0.6007392765899422,26.0
+Colorado,topic_merged_26,0.0,-0.6007392765899422,26.0
+Iowa,topic_merged_26,0.0,-0.6007392765899422,26.0
+Kentucky,topic_merged_26,0.0,-0.6007392765899422,26.0
+Alabama,topic_merged_27,0.0,-0.3050619282834688,13.0
+Arkansas,topic_merged_27,0.0,-0.3050619282834688,13.0
+Colorado,topic_merged_27,0.0,-0.3050619282834688,13.0
+Connecticut,topic_merged_27,0.0,-0.3050619282834688,13.0
+District of Columbia,topic_merged_27,0.0,-0.3050619282834688,13.0
+Alabama,topic_merged_28,0.0,-0.7280865596554954,32.0
+Colorado,topic_merged_28,0.0,-0.7280865596554954,32.0
+District of Columbia,topic_merged_28,0.0,-0.7280865596554954,32.0
+Minnesota,topic_merged_28,0.0,-0.7280865596554954,32.0
+Wisconsin,topic_merged_28,0.0,-0.7280865596554954,32.0
+Alabama,topic_merged_29,0.0,-0.18325035294593342,4.0
+Arizona,topic_merged_29,0.0,-0.18325035294593342,4.0
+Arkansas,topic_merged_29,0.0,-0.18325035294593342,4.0
+Colorado,topic_merged_29,0.0,-0.18325035294593342,4.0
+Connecticut,topic_merged_29,0.0,-0.18325035294593342,4.0
+Alabama,topic_merged_3,0.0,-0.5145257417862422,20.0
+Colorado,topic_merged_3,0.0,-0.5145257417862422,20.0
+District of Columbia,topic_merged_3,0.0,-0.5145257417862422,20.0
+Illinois,topic_merged_3,0.0,-0.5145257417862422,20.0
+Iowa,topic_merged_3,0.0,-0.5145257417862422,20.0
+Alabama,topic_merged_30,0.0,-0.46937059025983885,20.0
+Arkansas,topic_merged_30,0.0,-0.46937059025983885,20.0
+Colorado,topic_merged_30,0.0,-0.46937059025983885,20.0
+Connecticut,topic_merged_30,0.0,-0.46937059025983885,20.0
+District of Columbia,topic_merged_30,0.0,-0.46937059025983885,20.0
+Alabama,topic_merged_31,0.0,-0.3097421472833581,12.0
+Arkansas,topic_merged_31,0.0,-0.3097421472833581,12.0
+California,topic_merged_31,0.0,-0.3097421472833581,12.0
+Connecticut,topic_merged_31,0.0,-0.3097421472833581,12.0
+District of Columbia,topic_merged_31,0.0,-0.3097421472833581,12.0
+Alabama,topic_merged_32,0.0,-0.8346641138632758,33.0
+District of Columbia,topic_merged_32,0.0,-0.8346641138632758,33.0
+Kansas,topic_merged_32,0.0,-0.8346641138632758,33.0
+Oklahoma,topic_merged_32,0.0,-0.8346641138632758,33.0
+Michigan,topic_merged_32,0.0018281535648994515,-0.741217265245193,32.0
+Alabama,topic_merged_33,0.0,-0.8346355426364553,35.0
+Oklahoma,topic_merged_33,0.0,-0.8346355426364553,35.0
+Colorado,topic_merged_33,0.004098360655737705,-0.775166757654073,34.0
+Georgia,topic_merged_33,0.007321537522879805,-0.7283972251084407,33.0
+Nebraska,topic_merged_33,0.008771929824561403,-0.7073514765338123,32.0
+Arkansas,topic_merged_34,0.0,-0.6531508908410711,28.0
+District of Columbia,topic_merged_34,0.0,-0.6531508908410711,28.0
+Indiana,topic_merged_34,0.0,-0.6531508908410711,28.0
+Iowa,topic_merged_34,0.0,-0.6531508908410711,28.0
+Maryland,topic_merged_34,0.0,-0.6531508908410711,28.0
+Arizona,topic_merged_35,0.0,-0.4470780721304432,26.0
+Arkansas,topic_merged_35,0.0,-0.4470780721304432,26.0
+Indiana,topic_merged_35,0.0,-0.4470780721304432,26.0
+Iowa,topic_merged_35,0.0,-0.4470780721304432,26.0
+Kentucky,topic_merged_35,0.0,-0.4470780721304432,26.0
+Alabama,topic_merged_36,0.0,-1.0222851781447149,29.0
+District of Columbia,topic_merged_36,0.0,-1.0222851781447149,29.0
+Kentucky,topic_merged_36,0.0,-1.0222851781447149,29.0
+Michigan,topic_merged_36,0.0,-1.0222851781447149,29.0
+Nebraska,topic_merged_36,0.0,-1.0222851781447149,29.0
+Alabama,topic_merged_37,0.0,-0.9461461646311411,28.0
+District of Columbia,topic_merged_37,0.0,-0.9461461646311411,28.0
+Indiana,topic_merged_37,0.0,-0.9461461646311411,28.0
+Kansas,topic_merged_37,0.0,-0.9461461646311411,28.0
+Louisiana,topic_merged_37,0.0,-0.9461461646311411,28.0
+Alabama,topic_merged_38,0.0,-0.305871361978706,27.0
+Arizona,topic_merged_38,0.0,-0.305871361978706,27.0
+Colorado,topic_merged_38,0.0,-0.305871361978706,27.0
+District of Columbia,topic_merged_38,0.0,-0.305871361978706,27.0
+Indiana,topic_merged_38,0.0,-0.305871361978706,27.0
+Alabama,topic_merged_39,0.0,-0.6910833925327897,29.0
+Kansas,topic_merged_39,0.0,-0.6910833925327897,29.0
+Kentucky,topic_merged_39,0.0,-0.6910833925327897,29.0
+Louisiana,topic_merged_39,0.0,-0.6910833925327897,29.0
+Minnesota,topic_merged_39,0.0,-0.6910833925327897,29.0
+Alabama,topic_merged_4,0.0,-0.1958628358116477,11.0
+Arkansas,topic_merged_4,0.0,-0.1958628358116477,11.0
+Colorado,topic_merged_4,0.0,-0.1958628358116477,11.0
+District of Columbia,topic_merged_4,0.0,-0.1958628358116477,11.0
+Indiana,topic_merged_4,0.0,-0.1958628358116477,11.0
+Alabama,topic_merged_40,0.0,-1.0527920081970807,29.0
+Arizona,topic_merged_40,0.0,-1.0527920081970807,29.0
+District of Columbia,topic_merged_40,0.0,-1.0527920081970807,29.0
+Indiana,topic_merged_40,0.0,-1.0527920081970807,29.0
+Kentucky,topic_merged_40,0.0,-1.0527920081970807,29.0
+Kansas,topic_merged_41,0.0,-0.6840635109177522,34.0
+Kentucky,topic_merged_41,0.0,-0.6840635109177522,34.0
+Oklahoma,topic_merged_41,0.0,-0.6840635109177522,34.0
+Michigan,topic_merged_41,0.002742230347349177,-0.6208485210353085,33.0
+Washington,topic_merged_41,0.007352941176470588,-0.5145605723604153,32.0
+Alabama,topic_merged_42,0.0,-0.6475558086199326,25.0
+Arkansas,topic_merged_42,0.0,-0.6475558086199326,25.0
+Kansas,topic_merged_42,0.0,-0.6475558086199326,25.0
+Kentucky,topic_merged_42,0.0,-0.6475558086199326,25.0
+Louisiana,topic_merged_42,0.0,-0.6475558086199326,25.0
+District of Columbia,topic_merged_43,0.0,-0.6519205078968887,32.0
+Kentucky,topic_merged_43,0.0,-0.6519205078968887,32.0
+Oklahoma,topic_merged_43,0.0,-0.6519205078968887,32.0
+Oregon,topic_merged_43,0.0,-0.6519205078968887,32.0
+Tennessee,topic_merged_43,0.0,-0.6519205078968887,32.0
+Alabama,topic_merged_44,0.0,-0.8743520841730071,35.0
+Iowa,topic_merged_44,0.0,-0.8743520841730071,35.0
+Michigan,topic_merged_44,0.002559414990859232,-0.8348089361252664,34.0
+Massachusetts,topic_merged_44,0.004726536124240378,-0.80132675675196,33.0
+Pennsylvania,topic_merged_44,0.006941230911614993,-0.7671095609589816,32.0
+Arkansas,topic_merged_45,0.0,-0.455800055647582,22.0
+District of Columbia,topic_merged_45,0.0,-0.455800055647582,22.0
+Georgia,topic_merged_45,0.0,-0.455800055647582,22.0
+Indiana,topic_merged_45,0.0,-0.455800055647582,22.0
+Kansas,topic_merged_45,0.0,-0.455800055647582,22.0
+Arkansas,topic_merged_46,0.0,-1.224771804684146,34.0
+Kansas,topic_merged_46,0.0,-1.224771804684146,34.0
+Louisiana,topic_merged_46,0.0,-1.224771804684146,34.0
+Michigan,topic_merged_46,0.0007312614259597807,-1.16799036684483,33.0
+Wisconsin,topic_merged_46,0.001834862385321101,-1.0822972794634764,32.0
+Alabama,topic_merged_47,0.0,-0.7569614926500473,28.0
+Arkansas,topic_merged_47,0.0,-0.7569614926500473,28.0
+Connecticut,topic_merged_47,0.0,-0.7569614926500473,28.0
+Kansas,topic_merged_47,0.0,-0.7569614926500473,28.0
+Kentucky,topic_merged_47,0.0,-0.7569614926500473,28.0
+Connecticut,topic_merged_48,0.0,-0.8415819534198642,35.0
+Minnesota,topic_merged_48,0.0,-0.8415819534198642,35.0
+Michigan,topic_merged_48,0.0005484460694698354,-0.8175078372770355,34.0
+Virginia,topic_merged_48,0.0023510971786833857,-0.73838021729034,33.0
+Pennsylvania,topic_merged_48,0.0025451180009254974,-0.7298636464389912,32.0
+District of Columbia,topic_merged_49,0.0,-0.568177468536854,31.0
+Iowa,topic_merged_49,0.0,-0.568177468536854,31.0
+Kentucky,topic_merged_49,0.0,-0.568177468536854,31.0
+Louisiana,topic_merged_49,0.0,-0.568177468536854,31.0
+Minnesota,topic_merged_49,0.0,-0.568177468536854,31.0
+Alabama,topic_merged_5,0.0,-0.8977371765745042,27.0
+Arkansas,topic_merged_5,0.0,-0.8977371765745042,27.0
+Colorado,topic_merged_5,0.0,-0.8977371765745042,27.0
+Indiana,topic_merged_5,0.0,-0.8977371765745042,27.0
+Iowa,topic_merged_5,0.0,-0.8977371765745042,27.0
+Alabama,topic_merged_50,0.0,-0.5160594669116432,25.0
+Colorado,topic_merged_50,0.0,-0.5160594669116432,25.0
+District of Columbia,topic_merged_50,0.0,-0.5160594669116432,25.0
+Iowa,topic_merged_50,0.0,-0.5160594669116432,25.0
+Kansas,topic_merged_50,0.0,-0.5160594669116432,25.0
+Alabama,topic_merged_51,0.0,-1.069950116684625,33.0
+District of Columbia,topic_merged_51,0.0,-1.069950116684625,33.0
+Indiana,topic_merged_51,0.0,-1.069950116684625,33.0
+Iowa,topic_merged_51,0.0,-1.069950116684625,33.0
+Pennsylvania,topic_merged_51,0.0011568718186024988,-0.9918003665726268,32.0
+Arkansas,topic_merged_52,0.0,-0.6726743543797659,33.0
+Iowa,topic_merged_52,0.0,-0.6726743543797659,33.0
+Kentucky,topic_merged_52,0.0,-0.6726743543797659,33.0
+Louisiana,topic_merged_52,0.0,-0.6726743543797659,33.0
+Michigan,topic_merged_52,0.00036563071297989033,-0.6575235753722899,32.0
+Alabama,topic_merged_53,0.0,-0.24169428376171181,18.0
+Arizona,topic_merged_53,0.0,-0.24169428376171181,18.0
+Arkansas,topic_merged_53,0.0,-0.24169428376171181,18.0
+Colorado,topic_merged_53,0.0,-0.24169428376171181,18.0
+District of Columbia,topic_merged_53,0.0,-0.24169428376171181,18.0
+Alabama,topic_merged_54,0.0,-0.2737437701274438,11.0
+Arizona,topic_merged_54,0.0,-0.2737437701274438,11.0
+Arkansas,topic_merged_54,0.0,-0.2737437701274438,11.0
+Colorado,topic_merged_54,0.0,-0.2737437701274438,11.0
+District of Columbia,topic_merged_54,0.0,-0.2737437701274438,11.0
+Alabama,topic_merged_55,0.0,-0.4865854854844582,16.0
+Arkansas,topic_merged_55,0.0,-0.4865854854844582,16.0
+Colorado,topic_merged_55,0.0,-0.4865854854844582,16.0
+Connecticut,topic_merged_55,0.0,-0.4865854854844582,16.0
+Illinois,topic_merged_55,0.0,-0.4865854854844582,16.0
+Alabama,topic_merged_56,0.0,-0.20116099047498154,24.0
+Arkansas,topic_merged_56,0.0,-0.20116099047498154,24.0
+District of Columbia,topic_merged_56,0.0,-0.20116099047498154,24.0
+Indiana,topic_merged_56,0.0,-0.20116099047498154,24.0
+Iowa,topic_merged_56,0.0,-0.20116099047498154,24.0
+Alabama,topic_merged_57,0.0,-0.19349299157667113,7.0
+Arizona,topic_merged_57,0.0,-0.19349299157667113,7.0
+Arkansas,topic_merged_57,0.0,-0.19349299157667113,7.0
+California,topic_merged_57,0.0,-0.19349299157667113,7.0
+Colorado,topic_merged_57,0.0,-0.19349299157667113,7.0
+Connecticut,topic_merged_58,0.0016414970453053183,-1.308440677559794,36.0
+Michigan,topic_merged_58,0.0018281535648994515,-1.3019753990744316,35.0
+South Carolina,topic_merged_58,0.002631578947368421,-1.2741469104089118,34.0
+Massachusetts,topic_merged_58,0.0027008777852802163,-1.271746585540614,33.0
+Pennsylvania,topic_merged_58,0.005321610365571494,-1.180971476243129,32.0
+Alabama,topic_merged_59,0.0,-0.442609472348145,28.0
+District of Columbia,topic_merged_59,0.0,-0.442609472348145,28.0
+Indiana,topic_merged_59,0.0,-0.442609472348145,28.0
+Iowa,topic_merged_59,0.0,-0.442609472348145,28.0
+Kansas,topic_merged_59,0.0,-0.442609472348145,28.0
+Alabama,topic_merged_6,0.0,-0.9560748944903229,33.0
+Indiana,topic_merged_6,0.0,-0.9560748944903229,33.0
+Iowa,topic_merged_6,0.0,-0.9560748944903229,33.0
+Michigan,topic_merged_6,0.0,-0.9560748944903229,33.0
+Pennsylvania,topic_merged_6,0.0023137436372049976,-0.8726992276208873,32.0
+Alabama,topic_merged_60,0.0,-0.8107586628380615,33.0
+District of Columbia,topic_merged_60,0.0,-0.8107586628380615,33.0
+Iowa,topic_merged_60,0.0,-0.8107586628380615,33.0
+Louisiana,topic_merged_60,0.0,-0.8107586628380615,33.0
+Michigan,topic_merged_60,0.0009140767824497258,-0.7435711951352022,32.0
+Alabama,topic_merged_61,0.0,-0.2643922594719085,33.0
+Iowa,topic_merged_61,0.0,-0.2643922594719085,33.0
+Kansas,topic_merged_61,0.0,-0.2643922594719085,33.0
+Kentucky,topic_merged_61,0.0,-0.2643922594719085,33.0
+Virginia,topic_merged_61,0.001567398119122257,-0.2506853146187079,32.0
+Alabama,topic_merged_62,0.0,-0.3525175751240988,9.0
+Arkansas,topic_merged_62,0.0,-0.3525175751240988,9.0
+Colorado,topic_merged_62,0.0,-0.3525175751240988,9.0
+Connecticut,topic_merged_62,0.0,-0.3525175751240988,9.0
+District of Columbia,topic_merged_62,0.0,-0.3525175751240988,9.0
+Arkansas,topic_merged_63,0.0,-0.5987979014853234,23.0
+District of Columbia,topic_merged_63,0.0,-0.5987979014853234,23.0
+Indiana,topic_merged_63,0.0,-0.5987979014853234,23.0
+Iowa,topic_merged_63,0.0,-0.5987979014853234,23.0
+Kentucky,topic_merged_63,0.0,-0.5987979014853234,23.0
+Alabama,topic_merged_64,0.0,-0.5807341076805939,35.0
+Kentucky,topic_merged_64,0.0,-0.5807341076805939,35.0
+Michigan,topic_merged_64,0.00036563071297989033,-0.576049661283001,34.0
+Pennsylvania,topic_merged_64,0.006247107820453493,-0.5006964065629979,33.0
+Nebraska,topic_merged_64,0.008771929824561403,-0.4683484857734301,32.0
+Alabama,topic_merged_65,0.0,-0.39767629617382066,24.0
+Connecticut,topic_merged_65,0.0,-0.39767629617382066,24.0
+Indiana,topic_merged_65,0.0,-0.39767629617382066,24.0
+Iowa,topic_merged_65,0.0,-0.39767629617382066,24.0
+Kansas,topic_merged_65,0.0,-0.39767629617382066,24.0
+Alabama,topic_merged_66,0.0,-0.25038418805523033,23.0
+Colorado,topic_merged_66,0.0,-0.25038418805523033,23.0
+Florida,topic_merged_66,0.0,-0.25038418805523033,23.0
+Iowa,topic_merged_66,0.0,-0.25038418805523033,23.0
+Kansas,topic_merged_66,0.0,-0.25038418805523033,23.0
+Alabama,topic_merged_67,0.0,-0.17955460950616178,4.0
+Arizona,topic_merged_67,0.0,-0.17955460950616178,4.0
+Arkansas,topic_merged_67,0.0,-0.17955460950616178,4.0
+California,topic_merged_67,0.0,-0.17955460950616178,4.0
+Colorado,topic_merged_67,0.0,-0.17955460950616178,4.0
+Kentucky,topic_merged_68,0.0,-0.8835700452091068,35.0
+Louisiana,topic_merged_68,0.0,-0.8835700452091068,35.0
+Connecticut,topic_merged_68,0.00032829940906106366,-0.8684777344991669,34.0
+Michigan,topic_merged_68,0.0014625228519195613,-0.8163361462365629,33.0
+Pennsylvania,topic_merged_68,0.0016196205460434984,-0.8091141801102317,32.0
+Alabama,topic_merged_69,0.0,-0.19010264988806697,5.0
+Arizona,topic_merged_69,0.0,-0.19010264988806697,5.0
+Arkansas,topic_merged_69,0.0,-0.19010264988806697,5.0
+California,topic_merged_69,0.0,-0.19010264988806697,5.0
+Colorado,topic_merged_69,0.0,-0.19010264988806697,5.0
+Alabama,topic_merged_7,0.0,-0.1932247059643035,17.0
+Arkansas,topic_merged_7,0.0,-0.1932247059643035,17.0
+Colorado,topic_merged_7,0.0,-0.1932247059643035,17.0
+District of Columbia,topic_merged_7,0.0,-0.1932247059643035,17.0
+Indiana,topic_merged_7,0.0,-0.1932247059643035,17.0
+Alabama,topic_merged_70,0.0,-0.2627405765714168,9.0
+Arizona,topic_merged_70,0.0,-0.2627405765714168,9.0
+Colorado,topic_merged_70,0.0,-0.2627405765714168,9.0
+Connecticut,topic_merged_70,0.0,-0.2627405765714168,9.0
+Florida,topic_merged_70,0.0,-0.2627405765714168,9.0
+Michigan,topic_merged_8,0.0014625228519195613,-1.324093080522785,36.0
+Connecticut,topic_merged_8,0.0016414970453053185,-1.317212631022218,35.0
+Pennsylvania,topic_merged_8,0.007866728366496992,-1.0778910342907393,34.0
+South Carolina,topic_merged_8,0.010526315789473684,-0.9756463664424933,33.0
+Massachusetts,topic_merged_8,0.010803511141120865,-0.9649899216069543,32.0
+Alabama,topic_merged_9,0.0,-0.23778993783790162,14.0
+Colorado,topic_merged_9,0.0,-0.23778993783790162,14.0
+Connecticut,topic_merged_9,0.0,-0.23778993783790162,14.0
+District of Columbia,topic_merged_9,0.0,-0.23778993783790162,14.0
+Georgia,topic_merged_9,0.0,-0.23778993783790162,14.0
