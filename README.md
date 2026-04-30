@@ -60,9 +60,9 @@ and UMAP `n_neighbors` (10, 15). Each run was evaluated on topic coherence
 
 ---
 
-## Section 3: Part C Statistics
+## Section 3: Word Statistics
 
-Section 3 includes a reproducible Part C statistics pipeline for:
+Section 3 includes a reproducible Part C word statistics pipeline for:
 
 1. state-topic concentration and ranking summaries,
 2. weighted log-odds comparisons for each state vs. the rest of states,
