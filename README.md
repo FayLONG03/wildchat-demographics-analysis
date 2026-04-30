@@ -83,8 +83,6 @@ topics as an additional robustness check.
 - `src/topic_modeling/results/log_odds_figures/log_odds_income.png` — bar chart visualization
 - `src/topic_modeling/results/permutation_test_education.csv` — permutation test results for top education topics
 
-> Note: The final log-odds figures used in the paper (Figure 7) are produced in `src/analyisis/topic_demographic_relationship.ipynb` using the merged 71-topic set, not this notebook.
-
 ### 2.3 CTM Robustness Check (`src/topic_modeling/ctm_robustness.ipynb`)
 
 We fit CombinedTM (Bianchi et al., 2021) on the same 68,668 preprocessed documents
@@ -110,8 +108,6 @@ component is less well-suited to short, heterogeneous conversational text.
 - `src/topic_modeling/results/ctm_topic_words_labeled.csv` — CTM topics with labels
 - `src/topic_modeling/results/ctm_vs_bertopic_comparison.csv` — side-by-side coherence/diversity comparison
 - `src/topic_modeling/results/ctm_state_topic_proportions.parquet` — state-level CTM topic proportions (`*.parquet` is gitignored)
-
-> The Jaccard lexical alignment analysis and demographic effect size comparison used in Appendix D of the paper are computed in `src/analyisis/CTM_robustness.ipynb` using the pre-computed outputs above.
 
 ---
 
