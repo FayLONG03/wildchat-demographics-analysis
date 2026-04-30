@@ -1,0 +1,701 @@
+\documentclass[11pt]{article}
+
+% Change "review" to "final" for the final version.
+% Change to "preprint" to generate a non-anonymous version with page numbers.
+\usepackage[preprint]{acl}
+
+% Standard package includes
+\usepackage{times}
+\usepackage{latexsym}
+
+% For proper rendering and hyphenation of words containing Latin characters
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{microtype}
+\usepackage{inconsolata}
+
+% Common packages for figures, tables, and URLs
+\usepackage{graphicx}
+\usepackage{booktabs}
+\usepackage{multirow}
+\usepackage{amsmath}
+\usepackage{url}
+\usepackage{amssymb} 
+\usepackage{tcolorbox}
+\tcbuselibrary{skins}
+\tcbuselibrary{breakable}
+% preamble
+\usepackage{makecell}
+\usepackage{subcaption}
+
+% If the title and author information does not fit, uncomment and adjust.
+% \setlength\titlebox{6cm}
+
+\title{Regional Variation in ChatGPT Use Across U.S. States: \\
+Evidence from Topic Modeling of the WildChat Corpus}
+
+\author{Alina Pan \\
+  Johns Hopkins University \\
+  \texttt{ypan50@jh.edu} \\\And
+  Fay Long \\
+  Johns Hopkins University \\
+  \texttt{ylong17@jh.edu} \\\AND
+  Kiera McCormick \\
+  Johns Hopkins University \\
+  \texttt{kmccor23@jh.edu} \\\And
+  Nian Gao \\
+  Johns Hopkins University \\
+  \texttt{ngao6@jh.edu} \\}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+We study whether ChatGPT use in WildChat varies geographically across U.S. states and whether these differences are associated with state-level educational attainment and income. We preprocess the corpus to obtain 68,668 first-turn English user prompts from 36 U.S. states. We then apply BERTopic to infer prompt topics, merge raw clusters into interpretable use categories, and measure their state-level prevalence. We find substantial cross-state heterogeneity: all 76 raw topics vary significantly across states. Demographic associations are more selective, with higher education and income linked to specialized creative uses, while generic image-generation requests are more common in lower-education and lower-income states. These findings suggest that regional patterns in ChatGPT use are uneven and topic-specific.
+\end{abstract}
+
+\section{Introduction}
+% [PLACEHOLDER: Motivate the project and state the main research problem.]
+% Suggested content:
+% - Generative AI is increasingly embedded in everyday information seeking, learning, and work.
+% - Existing studies often analyze aggregate ChatGPT usage, but less is known about geographic variation within the United States.
+% - This project asks whether state-level patterns of ChatGPT use reflect demographic and socioeconomic differences.
+% - Introduce the high-complexity / high-value vs. low-complexity task framing.
+% - Preview dataset, methods, and contributions.
+
+Generative AI and large language models such as ChatGPT have rapidly become embedded in everyday information-seeking, learning, and professional workflows. Yet despite widespread adoption, little is known about whether usage patterns vary across geographic and demographic contexts within the United States, and if they do, how they vary. Most prior work on user behavior with ChatGPT has focused on aggregate patterns or specific phenomena such as toxicity \citep{zhao2024wildchat}, leaving a gap in how usage varies across regions and socioeconomic groups.
+
+This gap matters for equity. If certain states predominantly use ChatGPT for lower-complexity tasks while others leverage it for coding assistance, structured writing, or professional research, this disparity may amplify existing socioeconomic inequalities. Recent work suggests that AI adoption in the United States is already geographically uneven, with higher-income and more educated regions integrating AI tools more deeply into professional and economic activity \citep{daepp2024emerging}. Understanding whether this divide is reflected in \emph{how} people use ChatGPT, not just whether they use it, is an important step toward inclusive AI design and policies.
+
+We address this question using WildChat \citep{zhao2024wildchat}, a large-scale corpus of real human--ChatGPT conversations with state-level geographic metadata. Applying BERTopic \citep{grootendorst2022bertopic} to English-language, U.S.-geolocated, user-authored first turns, we use labeled topics as empirical indicators of ChatGPT use categories,
+characterize their prevalence across 36 states, and test whether state-level prevalence patterns correlate with educational attainment and median household income using Spearman rank correlations and weighted log-odds comparisons. We additionally fit CombinedTM \citep{bianchi2021pretraining} as a robustness check.
+
+\paragraph{Research Questions.}
+
+\textbf{RQ1:} Do users in different U.S. states exhibit systematically different distributions of first-turn prompt topics from which ChatGPT use categories are inferred?
+\textbf{RQ2:} Do state-level patterns in topic-inferred ChatGPT use categories correlate with demographic factors such as educational attainment and household income?
+
+\paragraph{Hypotheses.}
+
+\textbf{H1:} State-level distributions of topic-inferred ChatGPT use categories will vary systematically across the United States. We expect these differences to reflect variation in the kinds of tasks and requests users bring to ChatGPT.
+\textbf{H2a:} States with higher educational attainment will show higher prevalence of topic-inferred ChatGPT use categories associated with high-complexity, knowledge-intensive tasks, such as research support, structured writing, and technical problem solving.
+\textbf{H2b:} States with higher household income will exhibit higher prevalence of topic-inferred ChatGPT use categories associated with productivity-oriented and technically complex tasks, reflecting possible greater integration of AI into professional workflows.
+
+\paragraph{Contributions.}
+
+(1) We provide a state-level analysis of topic-inferred ChatGPT use in WildChat.
+(2) We show how topic modeling can operationalize broad categories of ChatGPT use from first-turn prompts, while distinguishing model-derived topics from social-science interpretations of user purpose.
+(3) We connect state-level use-category prevalence to education and income, contributing to research on geographic and socioeconomic variation in generative AI adoption.
+
+\section{Related Work}
+
+\paragraph{Human--AI Interaction and Real--World ChatGPT Use.}
+% [PLACEHOLDER: Discuss WildChat and related work on user behavior with LLM systems.]
+% Include: \citet{zhao2024wildchat} and any relevant studies on ChatGPT usage patterns.
+
+Large-scale datasets of real user--chatbot interactions have become a key resource for studying how people use generative AI systems in practice. \citet{zhao2024wildchat} introduced WildChat, a corpus of one million user--ChatGPT conversations collected by offering free API access in exchange for consent to anonymized logging, enabling analysis of user behavior, toxicity, and prompt diversity across languages and demographics. A comparable resource, LMSYS-Chat-1M \citep{zheng2024lmsys}, covers one million conversations across 25 LLMs and has been used for content moderation, instruction tuning, and topic analysis. Prior work using these datasets has largely focused on aggregate usage statistics or safety-oriented phenomena such as jailbreaking. Our work complements this line of research by examining how topic-inferred use categories vary across geographic and demographic subgroups, rather than characterizing only aggregate user behavior.
+
+\paragraph{Geographic and Demographic Variation in Text.}
+% [PLACEHOLDER: Discuss computational social science work on geographic linguistic variation.]
+% Include: \citet{eisenstein2010latent} and related work.
+
+A substantial body of work in computational sociolinguistics has established that geographic context predicts lexical and stylistic variation in text. \citet{eisenstein2010latent} introduced a latent variable model of geographical lexical variation applied to Twitter data, finding that word choice varies meaningfully across U.S. regions in ways correlated with demographic features. Subsequent work has extended this framework to social media, news, and other user-generated content, consistently finding that geography is a meaningful signal for understanding language use. Our work extends this tradition to AI-mediated communication, asking whether the types of requests users bring to a chatbot, as inferred from first-turn prompt topics, also reflect geographic structure.
+
+\paragraph{AI Adoption, Inequality, and the Emerging AI Divide.}
+% [PLACEHOLDER: Discuss AI adoption disparities and economic/geographic reports.]
+% Include possible references such as Daepp and Counts (2024) and the Anthropic Economic Index report.
+
+Growing evidence suggests that adoption of generative AI tools is geographically and socioeconomically uneven. \citet{daepp2024emerging} analyzed county- and state-level Bing search query data for ChatGPT during its first six months of release, finding that awareness was concentrated in coastal metropolitan areas with more educated and higher-income populations, with education emerging as the strongest positive predictor. The Anthropic Economic Index \citep{appel2025anthropic} similarly finds that Claude usage strongly correlates with income across countries and that, within the United States, AI adoption is shaped by workforce composition and industry structure. Together, these findings motivate our study: if adoption is uneven, it follows that the purposes for which people use AI tools may also vary across regions, potentially amplifying existing socioeconomic disparities. 
+
+\paragraph{Neural Topic Modeling for Computational Social Science.}
+% [PLACEHOLDER: Discuss BERTopic, CTM, and why neural topic models are suitable for short conversational texts.]
+% Include: \citet{grootendorst2022bertopic}, \citet{bianchi2021pretraining}.
+
+Topic models are widely used in computational social science to characterize large text corpora. Classical approaches such as LDA \citep{blei2003lda} rely on bag-of-words (BOW) representations and struggle with short or heterogeneous texts. Neural topic models address this by incorporating pre-trained language representations. \citet{bianchi2021pretraining} introduced the Contextualized Topic Model (CTM) family, which combines contextual sentence embeddings from pre-trained transformers with a neural BOW representation, yielding more coherent topics than BOW baselines. \citet{grootendorst2022bertopic} proposed BERTopic, which encodes documents with sentence transformers, reduces dimensionality via UMAP, clusters with HDBSCAN, and extracts keywords using class-based TF-IDF. We apply BERTopic as our primary model and CombinedTM as a robustness check, following the recommendation that embedding-based models are better suited to conversational corpora than traditional BOW methods.
+
+\section{Data}
+\label{sec:data}
+% [PLACEHOLDER: Describe the corpus and external covariates.]
+
+\subsection{WildChat Corpus}
+We use WildChat \citep{zhao2024wildchat}, a publicly available corpus of 1M multi-turn conversations between real users and ChatGPT, collected between April 2023 and April 2024. Each record includes the conversation content, timestamp, the model version used, a hashed IP address, and the user's inferred U.S. state derived from request headers. The publicly available training set contains 837,989 conversations. After filtering for English-language conversations with a non-null U.S. state field, our analysis subset contains 128,943 conversations from all 50 U.S. states plus the District of Columbia, representing 15.39\% of the full corpus. Conversations are geographically skewed, where Michigan contributes the largest share (28.23\%), followed by California (15.38\%) and Massachusetts (5.43\%). Temporally, monthly volume is relatively stable across the collection period.
+
+\subsection{Filtering and Preprocessing}
+We applied several preprocessing steps to construct the final analysis corpus. First, we filtered the full WildChat corpus to retain English-language, U.S.-geolocated conversations with non-null state field. From each conversation, we extracted the first user turn for analysis, discarding both AI turns and subsequent user turns. AI turns are excluded because they reflect the model's behavior rather than user-initiated requests that we use to infer ChatGPT use. Among user turns, only the first turn is retained because follow-up turns are largely reactive, containing clarifications, corrections, or continuations that respond to the AI rather than independently expressing user intent. The first user turn thus provides the cleanest signal for inferring user's purpose of using ChatGPT. 
+
+We then removed empty user messages and applied deduplication of user messages using MinHash to remove near-identical user inputs originating from the same hashed IP address, which serves as a unique user identifier. Manual inspection revealed that many conversations originated from highly similar prompts submitted by the same users across separate conversations. This occurs because users of generative AI naturally tend to modify and send their prompts multiple times until they obtain satisfactory outputs. Without deduplication, such behavior would inflate the estimated prevalence of certain topic-inferred use categories. After deduplication, states with fewer than 100 conversations or fewer than 40 unique users were removed, reducing the state count from 51 to 36.
+
+For word statistics analyses only, we additionally applied lowercasing and punctuation removal following standard preprocessing practice. For topic modeling analyses only, we applied the long-text truncation procedure described in Section~\ref{subsec:long-text-handling}.
+
+\begin{table}[t]
+  \centering
+  \small
+  \begin{tabular}{lrr}
+    \toprule
+    \textbf{Filtering Step} & \textbf{Remaining} & \textbf{Removed} \\
+    \midrule
+    Full WildChat corpus & 837,989 & -- \\
+    U.S.-geolocated and\\
+    English-language only & 128,943 & 709,046 \\
+    Remove empty and duplicate\\
+    user messages& 69,842 & 59,101 \\
+    Remove states with small\\
+    sample sizes& 68,668 & 1,174 \\
+    Punctuation removal & 68,667 & 1 \\
+    \bottomrule
+  \end{tabular}
+  \caption{Filtering pipeline for constructing the final analysis corpus.}
+  \label{tab:filtering}
+\end{table}
+
+\subsection{Long-Text Handling}
+\label{subsec:long-text-handling}
+BERTopic relies on sentence transformer embeddings with a 512-token limit. Token counts across the corpus vary substantially. In total, 9,316 documents (13.57\%) exceed the 512-token limit.
+For these long documents, we applied a head-tail truncation strategy, in which the first 250 and last 250 content tokens (excluding special tokens) are retained and decoded back into a string, yielding a representation within the 512-token limit. This approach is motivated by the observation that users typically state their purpose at the beginning and end of a prompt, making the head and tail the most informative regions for topic inference. Documents within the 512-token limit were left unchanged.
+
+\subsection{State-Level Covariates}
+For demographic analyses, we use two state-level covariates from official U.S. Census ACS 2024 1-year subject tables: median household income from Table S1901 \citep{uscensus_acs2024_s1901} and educational attainment measured as the share of adults age 25+ with a bachelor's degree or higher from Table S1501 \citep{uscensus_acs2024_s1501}. These correspond to the downloaded files \texttt{ACSST1Y2024.S1901-2026-04-20T174538.csv} and \texttt{ACSST1Y2024.S1501-2026-04-20T174348.csv}.
+
+The raw ACS files are processed using \texttt{src/statistics/preprocess\_state\_covariates.py}, which extracts one value per state for each covariate and writes a clean table \texttt{data/state\_covariates.csv} with columns \texttt{state}, \texttt{income}, and \texttt{education}. This covariate table is merged with state-level topic prevalence in \texttt{src/statistics/spearman\_with\_covariates.py} for the correlation analyses described in Section~\ref{sec:methods}. We use an inner join on normalized state names and keep only states with complete values for both covariates, yielding 36 states in the final merged analysis set.
+
+
+\section{Methods}
+\label{sec:methods}
+% [PLACEHOLDER: Explain the full analysis pipeline.]
+
+\subsection{Topic Modeling}
+
+We apply BERTopic \citep{grootendorst2022bertopic} to the preprocessed first-turn user-prompt corpus. Documents are encoded using the \texttt{all-MiniLM-L6-v2} sentence transformer, reduced to five dimensions via UMAP, and clustered with HDBSCAN. Topic keywords are extracted using class-based TF-IDF. We swept five parameter configurations using \texttt{mini\_topic\_size} $\in$ \{50, 100, 200\} and UMAP \texttt{n\_neighbors}  $\in$ \{10, 15\}, evaluating each on topic coherence ($C_v$), topic diversity, topic count, and outlier rate (see Appendix~\ref{sec:appendix-topic-modeling}). We selected run\_04 (\texttt{min\_topic\_size}=100, \texttt{n\_neighbors}=15), which produced 76 topics with the highest coherence ($C_v$=0.581) and diversity (0.841) among configurations yielding an interpretable topic count. Documents not assigned to any topic (outlier rate: 44.9\%) are excluded from downstream analyses.
+
+\subsection{Topic Labeling and Use Category Construction}
+\paragraph{LLM-assisted labeling.} After fitting BERTopic, we translated raw model-derived clusters into interpretable use categories. We used GPT-5.5 Pro to assign both low-level topic labels and high-level super topic categories based on top words and user prompts, followed by manual verification\footnote{We use the default topic assignment from BERTopic, where each document is assigned to a single topic. As the number of topics is relatively small and the user prompts are short and typically centered on a single topic, LLM-based labeling is reliable and appropriate.}. To reduce fragmentation from the original clustering, we merged \emph{raw} topics with identical topic labels and used the \emph{merged} topics as the primary topic-inferred use categories for downstream analyses. See Appendix~\ref{sec:appendix-topic-labeling} for topic labeling prompts.
+
+\paragraph{Definition of task complexity.} Task complexity is interpreted inductively after topic labeling. Topics involving coding, technical problem solving, structured writing, and research-oriented queries are defined as higher-complexity uses, while casual or entertainment-oriented topics and generic image-generation categories are treated as lower-complexity tasks. 
+
+\subsection{Topic Prevalence Measures}
+\paragraph{State-level topic prevalence.}
+Let $n_s$ denote the number of chats from state $s$. For a chat $i$, let $z_i \in \{1,2,\cdots,K\}$ represent its BERTopic assignment and $s_i$ denote its associated state. We define the state-level prevalence of topic $k$ as:
+\begin{equation}
+  p_{s,k} = \frac{1}{n_s} \sum_{i: s_i=s} \mathbb{I}(z_i = k),
+  \label{eq:topic_prop}
+\end{equation}
+where $\mathbb{I}(\cdot)$ is an indicator function. This yields a state-by-topic matrix. For merged, labeled topics, we interpret $p_{s,k}$ as the state-level prevalence of a topic-inferred ChatGPT use category.
+
+\paragraph{Corpus-level topic prevalence.}
+We summarize each topic's overall corpus prevalence with a document-weighted average:
+\begin{equation}
+  WP_k =
+  \frac{\sum_s p_{s,k}\cdot n_s}{\sum_s n_s}.
+  \label{eq:weighted_prevalence}
+\end{equation}
+Super-topic prevalence is computed by summing $WP_k$ across topics in the same category.
+
+\paragraph{Z-score normalization.}
+For heatmaps (Figure~\ref{fig:heatmap_comparison}), we z-score each topic's state-level prevalence across states:
+\begin{equation}
+  \tilde{p}_{s,k}
+  =
+  \frac{p_{s,k}-\mu_k}{\sigma_k},
+  \label{eq:zscore_topic_prop}
+\end{equation}
+where $\mu_k$ and $\sigma_k$ are the across-state mean and standard deviation for topic $k$. This normalization is used only for visualization, and statistical analyses still use the original $p_{s,k}$.
+
+
+\subsection{Correlation and Significance Testing}
+
+\paragraph{H1: state heterogeneity.}
+We test whether topic prevalence varies across states beyond sampling noise, establishing geographic heterogeneity in the textual patterns from which we infer ChatGPT use categories. For each \emph{raw} topic $k$, we compute a weighted-dispersion statistic across states,
+\begin{equation}
+D_k=\frac{\sum_s n_s\left(p_{s,k}-WP_k\right)^2}{\sum_s n_s},
+\label{eq:weighted_dispersion}
+\end{equation}
+where $WP_k$ is the document-weighted corpus prevalence defined in Eq.~(\ref{eq:weighted_prevalence}). Intuitively, $D_k$ is a weighted variance: larger values indicate stronger cross-state heterogeneity in topic prevalence. Significance is evaluated by permutation under a pooled null that preserves state sample sizes while resampling topic assignments at the global rate (5,000 draws per topic). We control multiple testing with Benjamini--Hochberg False Discovery Rate (BH-FDR) \citep{benjamini1995controlling}.
+
+The permutation p-value is computed as the proportion of null dispersions at least as large as the observed value, with add-one smoothing:
+\begin{equation}
+p_k \;=\; \frac{1 + \sum_{b=1}^{B}\mathbb{I}\!\left(D_k^{(b)} \ge D_k\right)}{1+B},~B=5000,
+\label{eq:perm_pvalue}
+\end{equation}
+
+
+\paragraph{H2a \& H2b: demographic association.}
+We collect state demographic covariates from the U.S. Census ACS 2024 1-year estimates: median household income from Table S1901 \cite{uscensus_acs2024_s1901} and the share of adults age 25+ with a bachelor's degree or higher from Table S1501 \cite{uscensus_acs2024_s1501}.
+
+For each \emph{merged} topic $k$ and covariate $c$, we estimate the Spearman rank correlation \citep{spearman1961proof} across states:
+\begin{equation}
+\rho_{k,c}=\rho_S\!\left(\{p_{s,k}\}_{s\in\mathcal S},\{x_{s,c}\}_{s\in\mathcal S}\right),
+\end{equation}
+where $p_{s,k}$ is state-level topic prevalence and $x_{s,c}$ is the value of covariate $c$ for state $s$. Spearman correlations and associated $p$-values are computed using \texttt{scipy.stats.spearmanr}.
+
+We control multiple testing using BH-FDR within each covariate across merged topics. As a robustness check, we compute 95\% bootstrap confidence intervals by resampling states and mark associations as CI-significant when the interval excludes zero.
+
+
+
+\subsection{Log-Odds Comparisons}
+
+As a supplementary analysis, we split states at the median of each covariate (income, education) and compute topic-level log-odds:
+\[
+\log\frac{\overline{p}_{\text{high},k}+\epsilon}{\overline{p}_{\text{low},k}+\epsilon},
+\]
+where $\overline{p}_{\text{high},k}$ and $\overline{p}_{\text{low},k}$ are mean merged-topic prevalences in the high/low groups, and $\epsilon=10^{-6}$ is a small smoothing constant.
+
+
+\section{Results}
+\label{sec:results}
+
+As summarized in Table~\ref{tab:analysis-scope}, our analysis includes 36 U.S. states after minimum coverage filtering. For RQ1, we use the original 76 \emph{raw} BERTopic clusters to test whether the topic distribution varies across states. For RQ2, we use 71 \emph{merged} and labeled topics as interpretable topic-inferred use categories for demographic correlation analyses.
+
+\begin{table}[h]
+  \centering
+  \small
+  \setlength{\tabcolsep}{3.5pt}
+  \renewcommand{\arraystretch}{0.95}
+  \begin{tabular}{cccccc}
+    \toprule
+    \textbf{Analysis} &
+    \textbf{States} &
+    \makecell{\textbf{Raw}\\\textbf{topics}} &
+    \makecell{\textbf{Merged}\\\textbf{topics}} &
+    \textbf{Covariates} &
+    \textbf{Tests} \\
+    \midrule
+    RQ1 & 36 & 76 & -- & -- & 76 \\
+    RQ2 & 36 & -- & 71 & 2 & 142 \\
+    \bottomrule
+  \end{tabular}
+  \caption{Scope of the state-level topic analyses.}
+  \label{tab:analysis-scope}
+\end{table}
+
+\subsection{From BERTopic Clusters to ChatGPT Use Categories}
+
+The 76 BERTopic clusters are consolidated into 71 \emph{merged} topics and 10 super-topic categories. Figure~\ref{fig:topic-hierarchy} shows that ChatGPT use is concentrated in three broad categories: Creative Writing \& Roleplay, Media, Art, and Entertainment, and Information/Trivia \& Explanatory QA, with Creative Writing \& Roleplay having the highest prevalence by a clear margin. Figure~\ref{fig:top-10-topics} shows a similar pattern at use-category level: the most prevalent merged topics are largely creative, media-oriented, or informational, including AI Art Prompting, Translation \& Word Meanings, and Sports Script Writing.
+
+\begin{figure*}[t]
+    \centering
+    \includegraphics[width=1.0\linewidth]{fig_super_topic_hierarchy_composition.png}
+    \caption{Super-topic composition by weighted prevalence of topic-inferred use categories. Each bar is decomposed into its top five merged topics plus remainder, highlighting differences in how concentrated or distributed topics are within categories.}
+    \label{fig:topic-hierarchy}
+\end{figure*}
+
+\begin{figure}[t]
+    \centering
+    \includegraphics[width=0.75\linewidth]{fig_top10_topic_weighted_prevalence.png}
+    \caption{Top-10 merged topic-inferred use categories by weighted prevalence.}
+    \label{fig:top-10-topics}
+\end{figure}
+
+\subsection{RQ1/H1: Regional Variation in Topic-Inferred ChatGPT Use}
+
+H1 is strongly supported. All 76 raw BERTopic clusters exhibit significant cross-state heterogeneity under a permutation-based binomial null model (BH-FDR $q = 2.0\times10^{-4}$). Figure~\ref{fig:cross-state-dispersion} shows the highest-dispersion topics, including Sports Script Writing, DDLC Fan Fiction, and Fetish Comedy Stories. These prompt clusters are particularly concentrated in specific states rather than evenly distributed. This finding suggests that regional context matters not only for whether people adopt generative AI, but also for the kinds of requests they bring to these systems.
+
+\begin{figure}[t]
+    \centering
+    \includegraphics[width=1.0\linewidth]{fig_cross_state_topic_dispersion.png}
+    \caption{Top-20 raw BERTopic clusters by cross-state weighted dispersion. All 76 topics are significant (BH-FDR $q<0.05$).}
+    \label{fig:cross-state-dispersion}
+\end{figure}
+
+
+\subsection{RQ2/H2: Demographic Correlates of Topic-Inferred ChatGPT Use}
+
+The distribution of $\rho$ values is highly uneven (Figure~\ref{fig:dist_comparison}): most \emph{merged} topics show weak associations, while a small number have larger and more stable correlations. We therefore focus on use categories with high $|\rho|$ and 95\% confidence intervals excluding zero. The corresponding scatter plots and full correlation table are reported in Appendix~\ref{sec:appendix-rq2-spearman}.
+
+
+\begin{figure*}[t]
+\centering
+    \begin{subfigure}{0.7\linewidth}
+        \centering
+        \includegraphics[width=\linewidth]{T1b_education_dist_top5.png}
+        \caption{Education. CI-significant topics: SCP Creative Writing ($\rho=0.53$), Image Generation Requests ($\rho=-0.52$), Game Concept Ideation ($\rho=0.44$).}
+        \label{fig:education_dist}
+    \end{subfigure}
+
+    \vspace{0.5em}
+
+    \begin{subfigure}{0.7\linewidth}
+        \centering
+        \includegraphics[width=\linewidth]{T1a_income_dist_top5.png}
+        \caption{Income. CI-significant topics: SCP Creative Writing ($\rho=0.52$), Image Generation Requests ($\rho=-0.43$), AI Art Prompting ($\rho=0.40$).}
+        \label{fig:income_dist}
+    \end{subfigure}
+
+    \caption{Effect-size distribution of Spearman correlations ($|\rho|$) across merged topic-inferred use categories. The shaded region highlights the top-5 topics by $|\rho|$. Insets show Spearman correlations ($\rho$) with 95\% bootstrap confidence intervals.}
+    \label{fig:dist_comparison}
+\end{figure*}
+
+\paragraph{H2a: Educational attainment.}
+Three topics are CI-significant: SCP Creative Writing ($\rho=0.53$), Image Generation Requests ($\rho=-0.52$), and Game Concept Ideation ($\rho=0.44$). Positive associations are concentrated in specialized creative tasks rather than the broader knowledge-intensive or technical uses anticipated by H2a. The negative association for Image Generation Requests suggests that more generic image-generation prompts are relatively more prevalent in lower-education states. Thus, H2a is only partially supported: educational attainment is associated with the prevalence of some topic-inferred use categories, but the strongest signals reflect creative specialization rather than a general shift toward research, technical problem solving, or professional productivity.
+
+\paragraph{H2b: Median household income.}
+Three topics are CI-significant: SCP Creative Writing ($\rho=0.52$), Image Generation Requests ($\rho=-0.43$), and AI Art Prompting ($\rho=0.40$). As with education, the positive associations are concentrated in creative and media-oriented use categories rather than professional or technically complex uses. Image Generation Requests is again negatively associated, indicating that generic image-generation requests are relatively more common in lower-income states. Thus, H2b is partially supported: income is associated with some differences in topic-inferred use prevalence, but the evidence does not support the stronger claim that higher-income states use ChatGPT primarily for productivity-oriented or technically complex tasks.
+
+We use log-odds comparisons as a supplementary check and defer results to Appendix~\ref{sec:appendix-rq2-log-odds}.
+
+\begin{figure*}[t]
+\centering
+    \begin{subfigure}{0.7\linewidth}
+        \centering
+        \includegraphics[width=\linewidth]{heatmap_education_top5_topics.png}
+        \caption{Education. Higher-education show higher prevalence for SCP Creative Writing and Game Concept Ideation, while Image Generation Requests is more prevalent in lower-education states.}
+        \label{fig:education_heatmap}
+    \end{subfigure}
+
+    \vspace{0.5em}
+
+    \begin{subfigure}{0.7\linewidth}
+        \centering
+        \includegraphics[width=\linewidth]{heatmap_income_top5_topics.png}
+        \caption{Income. Higher-income show higher prevalence for SCP Creative Writing and AI Art Prompting, while Image Generation Requests is more prevalent in lower-income states.}
+        \label{fig:income_heatmap}
+    \end{subfigure}
+
+    \caption{State-level prevalence heatmaps for topic-inferred use categories with the largest absolute Spearman correlations. Topic prevalence is z-scored across states.}
+    \label{fig:heatmap_comparison}
+\end{figure*}
+
+
+\subsection{Robustness Checks}
+Three robustness patterns strengthen the quantitative conclusions. First, lexical log-odds results (state vs. rest) align with the concentration patterns of topic-inferred use categories (e.g., Pennsylvania: \texttt{script}, \texttt{stadium}, \texttt{conference}; Florida: \texttt{email}, \texttt{bank}, \texttt{funds}; Michigan: \texttt{natsuki}, \texttt{monika}, \texttt{yuri}). Second, income and education effect profiles are highly aligned across topics (correlation between $\rho$ vectors $=0.941$; sign consistency $=0.961$), indicating a shared socioeconomic gradient. Third, we flag sparsity-sensitive cases (e.g., \texttt{topic\_63} is nonzero in 10/36 states) and report nonzero-state support alongside significance to avoid over-weighting rare topics.
+
+As an additional robustness check, we fit CombinedTM \citep{bianchi2021pretraining} on the same corpus with 76 components and 100 training epochs. CombinedTM achieved a coherence score of $C_v$=0.482 and diversity of 0.613, compared to BERTopic's $C_v$=0.581 and diversity of 0.841. The lower coherence and diversity of CombinedTM on this corpus likely reflects the limitations of its bag-of-words component on short, heterogeneous conversational text. Given BERTopic's stronger intrinsic performance, we used it as the primary model and report CombinedTM results in Appendix \ref{sec:appendix-robustness}.
+
+\section{Conclusion, Limitations, and Discussion}
+\label{sec:conclusion}
+
+\paragraph{Conclusion.}
+State-level distributions of topic-inferred ChatGPT use are geographically structured, supporting H1. Demographic correlations are concentrated in a small number of use categories. Educational attainment is positively associated with SCP Creative Writing and Game Concept Ideation, but negatively associated with Image Generation Requests. Income is positively associated with SCP Creative Writing and AI Art Prompting, and again negatively associated with Image Generation Requests. Thus, H2a and H2b are partially supported: state demographics are associated with the prevalence of some topic-inferred use categories, but the strongest signals reflect a contrast between generic and specialized creative uses rather than a simple divide between low-complexity and productivity-oriented tasks.
+
+The topic hierarchy further shows that topic-inferred ChatGPT use in WildChat, at least within first-turn prompts assigned to BERTopic clusters, is not dominated by professional productivity, coding, or formal education. Instead, Creative Writing \& Roleplay, Media, Art, and Entertainment, and Information/Trivia \& Explanatory QA account for the largest shares. This suggests that AI literacy and policy discussions should consider everyday creative, media-oriented, and informational uses alongside workplace and technical applications, rather than assuming that generative AI use is primarily professional or educational.
+
+\paragraph{Limitations.}
+WildChat is not representative of all ChatGPT users, and the final state-level analysis covers only 36 states after filtering. The analysis is observational and aggregated at the state level, so it cannot support causal or individual-level claims. IP-based state labels may be noisy due to VPNs, shared networks, mobile routing, or institutional access points. Topic modeling also introduces uncertainty through BERTopic assignments, LLM-assisted labels, manual merging, outlier exclusion, and long-text truncation. Finally, education and income are coarse state-level covariates; factors such as urbanicity, age, and occupation may also shape regional topic differences.
+
+\paragraph{Ethical Considerations.}
+We analyze only publicly released and de-identified WildChat data, aggregate results at the state level, and avoid quoting individual user prompts.
+
+\paragraph{Future Work.}
+Future work should examine finer geographic units, longitudinal changes, and more representative user samples. Additional covariates, such as occupation, age, urbanicity, and broadband access, could help determine whether the observed creative-specialization pattern reflects socioeconomic advantage, subcultural concentration, platform exposure, or other regional factors.
+
+
+
+\section*{Authorship Statement}
+All four authors contributed equally to this project, with shared responsibility for research design, analysis, and writing.
+AI code generation was used in part of the data preprocessing and analysis steps. 
+% Custom bibliography entries only.
+\nocite{zhao2024wildchat,eisenstein2010latent,grootendorst2022bertopic,bianchi2021pretraining,daepp2024emerging,blei2003lda,zheng2024lmsys,appel2025anthropic}
+\bibliography{custom}
+
+\appendix
+
+\section{Topic Modeling Details}
+\label{sec:appendix-topic-modeling}
+
+Table~\ref{tab:bertopic-sweep} reports results across the five BERTopic parameter configurations evaluated. Run 4 was selected as the best configuration based on coherence and diversity while maintaining an interpretable topic count.
+
+\begin{table*}[h]
+  \centering
+  \small
+  \begin{tabular}{lrrrrrrr}
+    \toprule
+    \textbf{Run} & \textbf{min2\_topic\_size} & \textbf{n\_neighbors} & \textbf{min\_cluster\_size} & \textbf{Topics} & \textbf{Outlier Rate} & \textbf{$C_V$} & \textbf{Diversity} \\
+    \midrule
+    1 & 50  & 10 & 50  & 184 & 0.443 & 0.567 & 0.804 \\
+    2 & 50  & 15 & 50  & 172 & 0.456 & 0.573 & 0.812 \\
+    3 & 100 & 10 & 100 & 78  & 0.424 & 0.567 & 0.837 \\
+    \textbf{4} & \textbf{100} & \textbf{15} & \textbf{100} & \textbf{76} & \textbf{0.449} & \textbf{0.581} & \textbf{0.841} \\
+    5 & 200 & 15 & 200 & 37  & 0.394 & 0.584 & 0.846 \\
+    \bottomrule
+  \end{tabular}
+  \caption{BERTopic parameter sweep results. Outlier Rate = fraction of documents assigned to no topic; $C_V$ = topic coherence; Diversity = topic diversity. Run 4 (bold) was selected as the final configuration.}
+  \label{tab:bertopic-sweep}
+\end{table*}
+
+% [PLACEHOLDER: Add hyperparameters, full topic list, coherence/diversity scores, and representative prompts.]
+
+\section{Topic Labeling Prompts}
+\label{sec:appendix-topic-labeling}
+\begin{tcolorbox}[
+  enhanced jigsaw,
+  colback=gray!5,
+  colframe=gray!40,
+  title=Prompt for Topic Labeling,
+  boxsep=3pt,
+  left=3pt,
+  right=3pt,
+  top=3pt,
+  bottom=3pt,
+  parskip=0pt,
+  breakable,
+  break at=-\baselineskip/0pt,
+  height fixed for=middle,
+  pad at break=1mm
+]
+
+Label BERTopic topics for interpretability and return a labeled CSV.\\
+
+\textbf{Contexts}:
+
+- Each \texttt{topic\_id} appears multiple times with sampled representative prompts.
+
+- \texttt{top\_words} are BERTopic keywords.
+
+- \texttt{topic\_label} is currently empty.
+
+- This is social-science analysis, so labels should be concise, human-readable, and analytically meaningful.\\
+
+\textbf{What to do}:
+
+1) Group rows by \texttt{topic\_id}.
+
+2) For each topic, read all prompts and key words and assign ONE final label for that topic.
+
+3) Write that same label to all rows of the same \texttt{topic\_id}.
+
+4) Explicitly flag vague or uncertain topics.\\
+
+\textbf{Labeling rules}:
+
+- 2–5 words per label.
+
+- Prefer purpose-based labels (e.g., ``Homework Help'', ``Coding Debugging'').
+
+- Avoid overly generic labels (``General Chat'', ``Misc'').
+
+- If topic is noisy/mixed, label as \texttt{Mixed / Unclear: <short reason>}.
+
+- Do not hallucinate beyond provided text.\\
+
+\textbf{Output requirements}:
+
+- Return ONE CSV with same row count and row order as input.
+
+- Do not drop or reorder rows.
+
+- Ensure same \texttt{topic\_id} has consistent \texttt{topic\_label}, \texttt{label\_confidence}, and unsure fields.
+
+- After the CSV, provide a short ``Uncertain Topics Summary'' table listing only topics with \texttt{unsure\_flag}$=1$ and why they are vague.\\
+
+\textbf{Quality check before finalizing}:
+
+- Verify every row has non-empty \texttt{topic\_label}.
+
+- Verify all rows in same \texttt{topic\_id} share identical labels.
+
+- Verify uncertain topics are explicitly documented.
+
+\end{tcolorbox}
+
+We pre-define the super-topic taxonomy based on low-level topic labeling results to ensure that raw BERTopic clusters are translated into consistent, purpose-based use categories.
+
+\begin{tcolorbox}[
+  enhanced jigsaw,
+  colback=gray!5,
+  colframe=gray!40,
+  title=Prompt for Super Topic Assignment,
+  boxsep=3pt,
+  left=3pt,
+  right=3pt,
+  top=3pt,
+  bottom=3pt,
+  parskip=0pt,
+  breakable,
+  break at=-\baselineskip/0pt,
+  height fixed for=middle,
+  pad at break=1mm
+]
+
+Extend the existing BERTopic labeling by assigning a higher-level grouping.\\
+
+\textbf{Context}:
+
+- \texttt{topic\_label} has already been completed and validated.
+
+- All previously unsure topics have been manually verified. You should directly use the current labeling as correct.\\
+
+\textbf{What to do}:
+
+1) Keep all existing rows, columns, row order, and values unchanged.
+
+2) Add ONE new column: \texttt{super\_topic}.
+
+3) Assign one \texttt{super\_topic} to each \texttt{topic\_id} based on its existing \texttt{topic\_label}, \texttt{top\_words}, and representative prompts.
+
+4) Ensure all rows with the same \texttt{topic\_id} get the exact same \texttt{super\_topic}.\\
+
+\textbf{Use this fixed super-topic taxonomy only}:
+
+1. Creative Writing \& Roleplay 
+
+2. Education \& Homework 
+
+3. Coding \& Technical Help 
+
+4. Career \& Professional Writing 
+
+5. Information/Trivia \& Explanatory QA
+
+6. Personal Advice \& Communication 
+
+7. Finance, Law, and Practical Life 
+
+8. Health, Biology, and Medicine 
+
+9. Politics, Religion, and Society
+
+10. Media, Art, and Entertainment\\
+
+\textbf{Assignment rules}:
+
+- Pick the single best-fit super-topic per \texttt{topic\_id} (no multi-label assignments).
+
+- Be consistent and maximize interpretability for downstream statistical reporting.\\
+
+\textbf{Quality check before finalizing}:
+
+- Same total row count as input.
+
+- Same ordering as input.
+
+- Every row has non-empty \texttt{super\_topic}.
+
+- Each \texttt{topic\_id} maps to exactly one unique \texttt{super\_topic}.
+
+\end{tcolorbox}
+
+\section{Additional RQ2 Results}
+\label{sec:appendix-rq2}
+\subsection{Spearman Correlation Details}
+\label{sec:appendix-rq2-spearman}
+We use 95\% bootstrap confidence intervals as the main significance indicator for RQ2 because they provide a direct uncertainty estimate for each use-category-level Spearman correlation and are appropriate for small-sample, non-normal state-level topic proportions. Table~\ref{tab:rq2-correlations} reports these intervals together with BH-FDR $q$ values as a stricter multiple-testing check. Under this criterion, the two education associations for SCP Creative Writing and Image Generation Requests remain significant, while the income associations do not.
+
+Figure~\ref{fig:scatter_comparison} provides the corresponding state-level scatter plots for CI-significant associations. Higher education and income are associated with higher prevalence of topic-inferred specialized creative use categories, while Image Generation Requests is more prevalent in lower-education and lower-income states.
+
+\begin{figure*}[t]
+\centering
+    \begin{subfigure}{0.7\linewidth}
+        \centering
+        \includegraphics[width=\linewidth]{T4b_education_scatter.png}
+        \caption{Education. SCP Creative Writing and Game Concept Ideation are positively associated with educational attainment, while Image Generation Requests is negatively associated.}
+        \label{fig:education_scatter}
+    \end{subfigure}
+
+    \vspace{0.5em}
+
+    \begin{subfigure}{0.7\linewidth}
+        \centering
+        \includegraphics[width=\linewidth]{T4a_income_scatter.png}
+        \caption{Income. SCP Creative Writing and AI Art Prompting are positively associated with median household income, while Image Generation Requests is negatively associated.}
+        \label{fig:income_scatter}
+    \end{subfigure}
+
+    \caption{State-level topic prevalence versus demographic covariates for CI-significant associations. Each point represents one state; fitted lines are included only as visual aids.}
+    \label{fig:scatter_comparison}
+\end{figure*}
+
+\begin{table*}[t]
+\centering
+\small
+\setlength{\tabcolsep}{4pt}
+\renewcommand{\arraystretch}{1.05}
+\begin{tabular}{llccccc}
+\toprule
+\textbf{Covariate} & 
+\multicolumn{1}{c}{\textbf{Topic}} & 
+$\boldsymbol{\rho}$ & 
+\textbf{CI low} & 
+\textbf{CI high} & 
+\textbf{BH-FDR $q$} \\
+\midrule
+\multirow{10}{*}{Education}
+& SCP Creative Writing* & 0.533 & 0.118 & 0.682 & 0.043 \\
+& Image Generation Requests* & -0.518 & -0.771 & -0.163 & 0.043 \\
+& Game Concept Ideation* & 0.440 & 0.034 & 0.731 & 0.172 \\
+& Social Media Copy & 0.371 & -0.009 & 0.670 & 0.458 \\
+& Education Research Writing & 0.354 & -0.036 & 0.613 & 0.473 \\
+& Mind \& Consciousness & 0.344 & -0.007 & 0.617 & 0.473 \\
+& Math Problem Solving & -0.297 & -0.614 & 0.096 & 0.615 \\
+& Tattoo SEO Writing & 0.296 & -0.118 & 0.506 & 0.615 \\
+& SQL Query Help & 0.295 & -0.092 & 0.554 & 0.615 \\
+& Fantasy Crossover Fanfiction & -0.290 & -0.461 & 0.217 & 0.615 \\
+\midrule
+\multirow{10}{*}{Income}
+& SCP Creative Writing* & 0.516 & 0.094 & 0.664 & 0.091 \\
+& Image Generation Requests* & -0.430 & -0.711 & -0.073 & 0.284 \\
+& AI Art Prompting* & 0.400 & 0.076 & 0.646 & 0.284 \\
+& Tattoo SEO Writing & 0.399 & -0.043 & 0.570 & 0.284 \\
+& Education Research Writing & 0.385 & -0.019 & 0.657 & 0.290 \\
+& Game Concept Ideation & 0.350 & -0.030 & 0.656 & 0.429 \\
+& Social Media Copy & 0.336 & -0.038 & 0.642 & 0.460 \\
+& Fantasy Crossover Fanfiction & -0.308 & -0.471 & 0.184 & 0.599 \\
+& Physics Problem Solving & 0.295 & -0.068 & 0.564 & 0.621 \\
+& SQL Query Help & 0.285 & -0.098 & 0.556 & 0.621 \\
+\bottomrule
+\end{tabular}
+\caption{Top-10 \emph{merged} topic associations with education and income, ranked by $|\rho|$ within each covariate. Topics marked with * have 95\% bootstrap confidence intervals that exclude zero. BH-FDR $q$ reports the Benjamini--Hochberg false discovery rate adjusted $q$-value.}
+\label{tab:rq2-correlations}
+\end{table*} 
+
+\subsection{Log-Odds Analysis}
+\label{sec:appendix-rq2-log-odds}
+Figure~\ref{fig:logodds_comparison} shows the supplementary check, which is broadly consistent with the Spearman results: CI-significant topics marked with stars tend to appear among the stronger log-odds contrasts. The agreement between rank correlations, bootstrap intervals, scatter plots, and log-odds comparisons supports the main conclusion that the demographic signal is concentrated in a small set of creative and media-oriented topics rather than broad productivity or technical categories.
+
+\begin{figure*}[t]
+\centering
+    \begin{subfigure}{0.7\linewidth}
+        \centering
+        \includegraphics[width=\linewidth]{log_odds_education.png}
+        \caption{Education. Positive values indicate higher prevalence in high-education states; negative values indicate higher prevalence in low-education states. Stars mark CI-significant Spearman associations.}
+        \label{fig:logodds_education}
+    \end{subfigure}
+
+    \vspace{0.5em}
+
+    \begin{subfigure}{0.7\linewidth}
+        \centering
+        \includegraphics[width=\linewidth]{log_odds_income.png}
+        \caption{Income. Positive values indicate higher prevalence in high-income states; negative values indicate higher prevalence in low-income states. Stars mark CI-significant Spearman associations.}
+        \label{fig:logodds_income}
+    \end{subfigure}
+
+    \caption{Grouped log-odds comparisons for top topics in high- versus low-covariate states.}
+    \label{fig:logodds_comparison}
+\end{figure*}
+
+
+\section{Additional Robustness Checks}
+\label{sec:appendix-robustness}
+% [PLACEHOLDER: Add robustness results not included in the main paper.]
+
+We fit CombinedTM \citep{bianchi2021pretraining} on the same preprocessed corpus of 68,668 first-turn user prompts used for BERTopic, with 76 components and 100 training epochs, to assess whether the main findings are robust to the choice of topic model.
+
+\paragraph{Intrinsic model quality.} Figure \ref{fig:ctm-metrics} compares coherence and diversity across both models. CombinedTM achieved a coherence score of $C_v$=0.482 and topic diversity of 0.613, compared to BERTopic's $C_v$=0.581 and diversity of 0.841. The lower scores on both metrics likely reflect the limitations of CombinedTM's bag-of-words component on short, heterogeneous conversational text, consistent with prior findings that embedding-based clustering models outperform BOW-based approaches on such corpora.
+
+\begin{figure}[t]
+    \centering
+    \includegraphics[width=0.75\linewidth]{fig_ctm_vs_bertopic_metrics.png}
+    \caption{Coherence ($C_v$) and diversity scores for BERTopic (run\_04) and CombinedTM. BERTopic outperforms CombinedTM on both metrics.}
+    \label{fig:ctm-metrics}
+\end{figure}
+
+\paragraph{Lexical alignment with BERTopic topics.} To assess whether CombinedTM recovers similar thematic structure to BERTopic, we computed the best-match Jaccard similarity between each merged BERTopic topic and all CombinedTM topics based on their top keywords. Figure \ref{fig:ctm-jaccard} shows that alignment is generally low across all 71 merged topics, with most Jaccard similarities below 0.15. The highest-aligned topics include Game Dev Scripting (0.500), Career Resume Help (0.286), and Character Fusion Descriptions (0.286). Notably, the four CI-significant topics from the main BERTopic analysis (SCP Creative Writing, Image Generation Requests, Game Concept Ideation, and AI Art Prompting) all show low alignment scores ($\leq$0.059), indicating that CombinedTM does not recover these specific clusters in a lexically comparable form.
+
+\begin{figure}[t]
+    \centering
+    \includegraphics[width=1.0\linewidth]{fig_full_jaccard_ranking.png}
+    \caption{BERTopic--CombinedTM lexical alignment (best-match Jaccard similarity) for the top-20 topics by alignment score plus all CI-significant topics (marked with $\star$). CI-significant topics show low alignment ($\leq 0.059$), indicating that CombinedTM does not recover these clusters in a lexically comparable form.}
+    \label{fig:ctm-jaccard}
+\end{figure}
+
+\paragraph{Demographic signal under low alignment.} Figure \ref{fig:ctm-alignment-effect} plots lexical alignment against demographic effect size (|$\rho$|) for all 71 merged BERTopic topics. The CI-significant topics cluster in the upper-left region, which is high demographic effect size but low CombinedTM alignment. This suggests that the topics most associated with education and income are precisely those that CombinedTM does not replicate well. This pattern is consistent with CombinedTM's weaker intrinsic performance on this corpus and does not contradict the main findings; rather, it reflects model differences in how thematic structure is recovered from short conversational text.
+
+\begin{figure}[t]
+    \centering
+    \includegraphics[width=1.0\linewidth]{fig_alignment_vs_effect_size.png}
+    \caption{CombinedTM lexical alignment (best-match Jaccard similarity) versus demographic effect size ($|\rho|$) for all 71 merged BERTopic topics. CI-significant topics (red) cluster in the upper-left region, indicating high demographic signal but low CombinedTM alignment.}
+    \label{fig:ctm-alignment-effect}
+\end{figure}
+
+\paragraph{Summary.} Given BERTopic's stronger coherence and diversity on this corpus, we treat CombinedTM as a secondary check rather than an alternative primary model. The lexical alignment analysis confirms that both models recover some shared thematic structure, but CombinedTM's bag-of-words component limits its ability to distinguish the specialized creative topics most associated with demographic variation.
+
+\end{document}

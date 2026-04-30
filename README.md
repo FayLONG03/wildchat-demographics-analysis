@@ -60,15 +60,16 @@ and UMAP `n_neighbors` (10, 15). Each run was evaluated on topic coherence
 
 ---
 
-## Section 3: Word Statistics
+## Section 3: Part C Statistics
 
-Section 3 includes a reproducible Part C pipeline for:
+Section 3 includes a reproducible Part C statistics pipeline for:
 
 1. state-topic concentration and ranking summaries,
 2. weighted log-odds comparisons for each state vs. the rest of states,
-3. simulation-based significance tests of topic heterogeneity across states (binomial null model weighted by per-state document counts; see `src/statistics/topic_group_significance.py`).
+3. simulation-based significance tests of topic heterogeneity across states (binomial null model weighted by per-state document counts; see `src/statistics/topic_group_significance.py`),
+4. (extension) Spearman analyses with external ACS covariates (income + education), plus summary/diagnostic snapshots.
 
-### Required input data
+### Core Part C input data
 
 - `data/state_topic_proportions.parquet`
 - `data/wildchat_bertopic.parquet`
@@ -81,10 +82,12 @@ python src/statistics/run_part_c.py \
   --topic-proportions data/state_topic_proportions.parquet \
   --state-docs-input data/wildchat_bertopic.parquet \
   --log-odds-input data/wildchat_log_odds.parquet \
+  --log-odds-state-whitelist data/state_topic_proportions.parquet \
+  --min-token-length 3 \
   --output-dir results/statistics
 ```
 
-### Output files
+### Core output files (`results/statistics`)
 
 - `results/statistics/state_topic_long.csv`
 - `results/statistics/topic_variation_by_state.csv`
@@ -95,6 +98,45 @@ python src/statistics/run_part_c.py \
 - `results/statistics/log_odds_state_vs_rest_top_50.csv`
 - `results/statistics/log_odds_state_vs_rest_bottom_50.csv`
 - `results/statistics/log_odds_<STATE>_vs_rest.csv` for each included state
+
+### Covariate extension (income + education)
+
+These scripts are run separately from `run_part_c.py`:
+
+1) Build covariates from ACS tables
+
+```bash
+python src/statistics/preprocess_state_covariates.py \
+  --income data/Income/ACSST1Y2024.S1901-2026-04-20T174538.csv \
+  --education data/Education/ACSST1Y2024.S1501-2026-04-20T174348.csv \
+  --output data/state_covariates.csv
+```
+
+2) Run Spearman correlations with FDR correction
+
+```bash
+python src/statistics/spearman_with_covariates.py \
+  --topic-proportions data/state_topic_proportions.parquet \
+  --covariates data/state_covariates.csv \
+  --output-dir results/statistics
+```
+
+3) Generate report-ready snapshots
+
+```bash
+python src/statistics/summarize_spearman_covariates.py
+python src/statistics/diagnose_spearman_covariates.py
+```
+
+Additional outputs from this extension:
+
+- `data/state_covariates.csv`
+- `results/statistics/state_topic_with_covariates.csv`
+- `results/statistics/spearman_topic_covariates.csv`
+- `results/statistics/spearman_topic_covariates_significant.csv`
+- `results/statistics/part_c_results/part_c_result_run3.txt`
+- `results/statistics/part_c_results/part_c_result_run4.txt`
+- `results/statistics/part_c_results/spearman_significant_deep_summary.csv`
 
 ---
 
@@ -128,7 +170,7 @@ python src/statistics/run_part_c.py \
 │   │   ├── ctm_robustness.ipynb            # CTM training and metric computation
 │   │   ├── log_odds_analysis.ipynb         # Log-odds computation per state
 │   │   └── results/                        # Intermediate model outputs (labels, word lists)
-│   ├── statistics/                         # Part C pipeline (`run_part_c.py` + helpers)
+│   ├── statistics/                         # Part C scripts (core pipeline + ACS/Spearman extensions)
 │   ├── analyisis/                          # Analysis notebooks (Section 4)
 │   │   ├── labeled_topics.ipynb
 │   │   ├── topic_demographic_relationship.ipynb
@@ -136,7 +178,7 @@ python src/statistics/run_part_c.py \
 │   └── summary.ipynb                       # Executive summary (Section 4)
 │
 ├── results/
-│   ├── statistics/                         # Part C output tables
+│   ├── statistics/                         # Part C outputs (core + covariate extension)
 │   ├── statistics_merged71/                # Optional merged-topic statistics outputs
 │   ├── qualitative/                        # Intermediate tables and figures from earlier runs
 │   └── summary/                            # Figures and tables written by Section 4 notebooks
